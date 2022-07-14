@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelSubbidang extends Migration
+class CreateTabelDak extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateTabelSubbidang extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_subbidang', function (Blueprint $table) {
+        Schema::create('tabel_dak', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_subbidang', 100);
             $table->timestamps();
-        });
-
-        Schema::table('tabel_subbidang', function (Blueprint $table) {
-            $table->foreignId('id_bidang')->constrained('tabel_bidang');
         });
     }
 
@@ -31,6 +26,6 @@ class CreateTabelSubbidang extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_subbidang');
+        Schema::dropIfExists('tabel_dak');
     }
 }

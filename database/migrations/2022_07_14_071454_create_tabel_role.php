@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKk extends Migration
+class CreateTabelRole extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateKk extends Migration
      */
     public function up()
     {
-        Schema::create('kk', function (Blueprint $table) {
+        Schema::create('tabel_role', function (Blueprint $table) {
             $table->id();
+            $table->string('jenis_role', 50);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateKk extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kk');
+        Schema::dropIfExists('tabel_role');
     }
 }
