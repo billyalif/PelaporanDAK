@@ -1,3 +1,3 @@
 <?php
- ini home
+ ini home by lut
 ?>
