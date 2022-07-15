@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelAdmin extends Migration
+class CreateTabelDak extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateTabelAdmin extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_admin', function (Blueprint $table) {
+        Schema::create('tabel_dak', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nama_dak', 50);
         });
     }
 
@@ -26,6 +27,6 @@ class CreateTabelAdmin extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_admin');
+        Schema::dropIfExists('tabel_dak');
     }
 }

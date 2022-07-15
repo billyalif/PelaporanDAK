@@ -21,7 +21,6 @@ class CreateTabelKegiatan extends Migration
         });
 
         Schema::table('tabel_kegiatan', function (Blueprint $table) {
-            $table->foreignId('id_anggaran')->constrained('tabel_anggaran');
             $table->foreignId('id_subbidang')->constrained('tabel_subbidang');
         });
     }
