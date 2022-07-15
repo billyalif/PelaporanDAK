@@ -16,6 +16,7 @@ class CreateTabelDak extends Migration
         Schema::create('tabel_dak', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nama_dak');
         });
     }
 

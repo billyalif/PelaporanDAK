@@ -16,7 +16,24 @@ class CreateTabelAnggaran extends Migration
         Schema::create('tabel_anggaran', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('jenis_anggaran',150);
+            $table->integer('volume');
+            $table->string('satuan');
+            $table->bigInteger('harga_satuan');
+            $table->integer('volume');
+            $table->string('satuan');
+            $table->bigInteger('harga_satuan');
+            $table->integer('jumlah_penerima_manfaat');
+            $table->bigInteger('pagu_diterima');
+            $table->bigInteger('pagu_dibelanjakan');
         });
+
+        Schema::table('tabel_anggaran', function (Blueprint $table) {
+            $table->foreignId('id_dak')->constrained('tabel_dak');
+            $table->foreignId('id_batch')->constrained('tabel_batch');
+            $table->foreignId('id_kegiatan')->constrained('table_kegiatan');
+        });
+
     }
 
     /**

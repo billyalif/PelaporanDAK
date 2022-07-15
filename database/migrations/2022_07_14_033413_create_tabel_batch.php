@@ -16,6 +16,8 @@ class CreateTabelBatch extends Migration
         Schema::create('tabel_batch', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->char('triwulan_batch', 1);
+            $table->char('tahun_batch', 4);
         });
     }
 
