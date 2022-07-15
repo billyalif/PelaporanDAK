@@ -15,7 +15,14 @@ class CreateTabelKegiatan extends Migration
     {
         Schema::create('tabel_kegiatan', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_kegiatan', 100);
+            $table->mediumText('deskripsi_kegiatan');
             $table->timestamps();
+        });
+
+        Schema::table('tabel_kegiatan', function (Blueprint $table) {
+            $table->foreignId('id_anggaran')->constrained('tabel_anggaran');
+            $table->foreignId('id_subbidang')->constrained('tabel_subbidang');
         });
     }
 
