@@ -17,10 +17,10 @@
         <link href="css/sb-admin-2.css" rel="stylesheet">
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        {{-- <!-- Navigation-->
         <nav class="navbar bg-light">
             <div class="container-fluid">
-                <a href="#">
+                <a class="navbar-brand" href="#">
                 <img src="../img/Group 3776.svg" width="400" height="70" class="d-inline-block align-text-top" href="#page-top">
                 </a>
             </div>
@@ -39,8 +39,30 @@
                 <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
             </div> --}}
             
-            <button class="btn1 btn-masuk" href="{{url('login')}}">   MASUK   </button>
+            {{-- <button class="btn1 btn-masuk" href="#">   MASUK   </button>
+        </div> --}}
+
+        <div class="split1 left">
+            <nav class="navbar bg-login">
+                <div class="container-fluid">
+                    <a href="#">
+                    <img src="../img/Group 3776.svg" width="400" height="70" class="d-inline-block align-text-top" href="#page-top">
+                    </a>
+                </div>
+            </nav>
+
+            <a>
+                <img class ="kiri1" src="../img/Group 2.svg" width="475" height="475" style="mt-6"/>
+            </a>
+
         </div>
-        
+          
+        <div class="split2 right">
+            {{-- <div class="centered">
+              <img src="https://dosenit.com/wp-content/uploads/2021/02/images.png" alt="Avatar man">
+              <h2>Mariane Tyler</h2>
+              <p>Hi, aku mariane tyler.</p>
+            </div> --}}
+        </div>
     </body>
 </html>
