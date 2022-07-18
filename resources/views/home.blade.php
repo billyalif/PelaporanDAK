@@ -21,7 +21,7 @@
         <nav class="navbar bg-light">
             <div class="container-fluid">
                 <a href="#">
-                <img src="../img/Group 3776.svg" width="400" height="70" class="d-inline-block align-text-top" href="#page-top">
+                <img src="../img/Group 3776.svg" width="400" height="70" class="d-inline-block align-text-top" href="{{ url('home') }}">
                 </a>
             </div>
         </nav>
@@ -31,15 +31,15 @@
         </a>
 
         <div class="jarak">
-            <h1 class="font" style="color:white">SISTEM INFORMASI</h1>
-            <h1 class="font" style="color:white">PELAPORAN DAK</h1>
-            <h1 class="font" style="color:white">TAHUN 2022</h1>
+            <h1 class="font">SISTEM INFORMASI</h1>
+            <h1 class="font">PELAPORAN DAK</h1>
+            <h1 class="font">TAHUN 2022</h1>
             {{-- <div class="d-flex flex-column flex-lg-row align-items-center">
                 <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                 <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
             </div> --}}
             
-            <button class="btn1 btn-masuk" href="{{url('login')}}">   MASUK   </button>
+            <a class="btn1 btn-masuk" href="{{ url('login') }}">   MASUK   </a>
         </div>
         
     </body>
