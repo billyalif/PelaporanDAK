@@ -43,25 +43,24 @@
                     <div class="card shadow-2-strong" style="border-radius: 0.5rem;">
                       <div class="card-body p-5 text-center">
             
-                        
-            
-                        <div class="form-outline mb-4">
-                          {{-- <label class="form-label" for="typeEmailX-2">Username</label> --}}
-                          <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Username"/>
-                        </div>
-            
-                        <div class="form-outline mb-4">
-                          {{-- <label class="form-label" for="typePasswordX-2">Password</label> --}}
-                          <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password"/>
-                        </div>
-            
-                        <!-- Checkbox -->
-                        <div class="form-check d-flex justify-content-start mb-4">
-                          <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                          <label class="form-check-label" for="form1Example3"> Remember password </label>
-                        </div>
-            
-                        <button class="btn btn-login btn-lg btn-block" type="submit" href="#">Sign In</button>
+                        <form>
+                          <div class="form-group" style="text-align: left;">
+                            <label for="exampleDropdownFormEmail2" style="color: rgb(27, 22, 22);font-weight: 500;">Username</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                          </div>
+                          <div class="form-group" style="text-align: left;">
+                            <label for="exampleDropdownFormPassword2" style="color: rgb(27, 22, 22);font-weight: 500;">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                          </div>
+                          <div class="form-check" style="text-align: left">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                            <label class="form-check-label" for="dropdownCheck2">
+                              Remember me
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-primary" style="padding: 0.5rem 12.5rem; margin-top: 1.5rem;
+                          font-weight: 500;">Sign In</button>
+                        </form>
             
                         {{-- <hr class="my-4">
             

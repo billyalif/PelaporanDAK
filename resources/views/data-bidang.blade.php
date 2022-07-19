@@ -42,60 +42,15 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Laporan</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Data Bidang</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
-                    <div class="row">
-
-                        <div class="col-lg-12">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-4">
-                                    <div style="color:black; text-align:center">
-                                    <h5> Cari Data Laporan </h5>
-                                    <h6> Pilih bulan dan satuan kerja yang anda butuhkan!</h6>
-                                    </div>
-                                    <div class="dropdown" style="text-align:center; margin-top: 1.5rem">
-                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Pilih Bulan
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="#">Action</a>
-                                          <a class="dropdown-item" href="#">Another action</a>
-                                          <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Satuan Kerja
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-primary" style="padding: 0.5rem 3rem; text-align:left;"type="button">
-                                            <i class="fas fa-fw fa-search"></i>
-                                                <span> Cari</span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                                {{-- <div class="card-body">
-                                    
-                                </div> --}}
-                            </div>
-
-                        </div>
-                    </div>
-
-                
+                    <button type="button" class="btn btn-primary1">Tambah Bidang</button>
                 
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="row" style="padding-top: 2rem">
 
                         <div class="col-lg-12 mb-4">
 
