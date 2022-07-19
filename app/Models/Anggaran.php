@@ -12,7 +12,7 @@ class Anggaran extends Model{
 
     protected  $table = 'anggaran';
     protected $primaryKey = 'id';
-    protected $fillable = [
+    protected $fillables = [
         'jenis_anggaran',
         'volume',
         'satuan',
@@ -21,13 +21,13 @@ class Anggaran extends Model{
         'pagu_diterima',
         'pagu_dibelanjakan'
     ];
-    
+
     //relationship
     public function Batch(){
         //just having one batch
         return $this->belongsTo(Batch::class, 'FK_id_batch', 'id');
     }
-    
+
     public function Dak(){
         //just having one dak
         return $this->belongsTo(Dak::class,'FK_id_dak', 'id');
@@ -37,6 +37,6 @@ class Anggaran extends Model{
         //just having one kegiatan
         return $this->belongsTo(Kegiatan::class, 'FK_id_kegiatan', 'id');
     }
-  
+
 }
 ?>
