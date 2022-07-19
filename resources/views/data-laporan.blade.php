@@ -54,24 +54,30 @@
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-4">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-primary">Pilih Bulan</button>
-                                        <button
-                                          type="button"
-                                          class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                                          data-mdb-toggle="dropdown"
-                                          aria-expanded="false"
-                                        >
-                                          <span class="visually-hidden">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <div class="dropdown" style="text-align:center">
+                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Pilih Bulan
                                         </button>
-                                        <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="#">Action</a></li>
-                                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                          <li><hr class="dropdown-divider" /></li>
-                                          <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                        </ul>
-                                      </div>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">Action</a>
+                                          <a class="dropdown-item" href="#">Another action</a>
+                                          <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Satuan Kerja
+                                          </button>
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-primary" style="padding: 0.5rem 3rem; text-align:left;"type="button">
+                                            <i class="fas fa-search fa-sm">&nbsp;&nbsp;&nbsp;Cari </i>
+                                        </button>
+                                    </div>
+
                                 </div>
                                 {{-- <div class="card-body">
                                     
@@ -183,8 +189,7 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
+<!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->

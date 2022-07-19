@@ -27,4 +27,8 @@ Route::get('/admin', function () {
 
 Route::get('/data-laporan', function () {
     return view('data-laporan');
+    
+});
+Route::get('/form-laporan', function () {
+    return view('formlaporan');
 });
