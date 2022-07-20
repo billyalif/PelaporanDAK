@@ -12,7 +12,7 @@
     <title>E-SIDAK</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
     <link
         href="@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');"
         rel="stylesheet">
@@ -70,7 +70,7 @@
                                     </select>
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Sub bidang / Kegiatan</label>
+                                    <label for="exampleFormControlSelect1">Sub bidang</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                       <option>1</option>
                                       <option>2</option>
@@ -80,8 +80,19 @@
                                     </select>
                                   </div>
                                   <div class="form-group">
+                                    <label for="formGroupExampleInput">Kegiatan</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                  </div>
+                                  <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleFormControlSelect1">Jenis DAK</label>
