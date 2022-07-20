@@ -27,8 +27,28 @@ Route::get('/admin', function () {
 
 Route::get('/data-laporan', function () {
     return view('data-laporan');
-    
 });
+
+Route::get('/data-bidang', function () {
+    return view('data-bidang');
+});
+
+Route::get('/data-satker', function () {
+    return view('data-satker');
+});
+
+Route::get('/data-subbid', function () {
+    return view('data-subbid');
+});
+
+Route::get('/data-kegiatan', function () {
+    return view('data-kegiatan');
+});
+
 Route::get('/form-laporan', function () {
     return view('formlaporan');
+});
+
+Route::get('/super-admin', function () {
+    return view('super-admin');
 });
