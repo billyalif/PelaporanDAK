@@ -70,7 +70,7 @@
                                     </select>
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Sub bidang / Kegiatan</label>
+                                    <label for="exampleFormControlSelect1">Sub bidang</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                       <option>1</option>
                                       <option>2</option>

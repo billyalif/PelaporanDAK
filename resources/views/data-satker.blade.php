@@ -63,33 +63,24 @@
                                     <table class="table">
                                         <thead class="thead-dark">
                                           <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama Satuan Kerja</th>
+                                            <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
+                                            {{-- @foreach ($data as $bidang) --}}
                                           <tr>
                                             <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <td>
+                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                            </td>
                                           </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                          </tr>
+                                          {{-- @endforeach --}}
                                         </tbody>
-                                      </table>
+                                    </table>
                                 </div>
                             </div>
 
