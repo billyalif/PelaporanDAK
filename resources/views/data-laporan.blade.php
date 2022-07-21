@@ -43,8 +43,8 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Data Laporan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
                     </div>
 
                     <div class="row">
@@ -108,33 +108,25 @@
                                     <table class="table">
                                         <thead class="thead-dark">
                                           <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Perangkat Daerah</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
+                                            {{-- @foreach ($data as $bidang) --}}
                                           <tr>
                                             <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <td>
+                                                <a href="" class="btn btn-sm btn-success">Download</a>
+                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
+                                            </td>
                                           </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                          </tr>
+                                          {{-- @endforeach --}}
                                         </tbody>
-                                      </table>
+                                    </table>
                                 </div>
                             </div>
 

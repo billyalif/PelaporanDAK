@@ -12,7 +12,7 @@
     <title>E-SIDAK</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
     <link
         href="@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');"
         rel="stylesheet">
@@ -43,8 +43,6 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Form Laporan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
                     <div class="row">
@@ -70,7 +68,7 @@
                                     </select>
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Sub bidang / Kegiatan</label>
+                                    <label for="exampleFormControlSelect1">Sub bidang</label>
                                     <select class="form-control" id="exampleFormControlSelect1">
                                       <option>1</option>
                                       <option>2</option>
@@ -80,8 +78,27 @@
                                     </select>
                                   </div>
                                   <div class="form-group">
+                                    <label for="formGroupExampleInput">Volume</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput">Satuan</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="formGroupExampleInput">Kegiatan</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                  </div>
+                                  <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
                                   </div>
                                   <div class="form-group">
                                     <label for="exampleFormControlSelect1">Jenis DAK</label>
@@ -102,6 +119,9 @@
                                            
                                         <button type="button" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-1 margin-left">
                                           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Submit
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-color btn-bg-color btn-sm col-xs-1 margin-left">
+                                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Cancel
                                         </button></div>
 
                                     </div>

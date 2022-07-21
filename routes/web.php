@@ -44,3 +44,11 @@ Route::get('/data-subbid', function () {
 Route::get('/data-kegiatan', function () {
     return view('data-kegiatan');
 });
+
+Route::get('/form-laporan', function () {
+    return view('formlaporan');
+});
+
+Route::get('/super-admin', function () {
+    return view('super-admin');
+});
