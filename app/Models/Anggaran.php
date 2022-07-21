@@ -16,6 +16,7 @@ class Anggaran extends Model{
         'jenis_anggaran',
         'volume',
         'satuan',
+        
         'harga_satuan',
         'jumlah_penerima_manfaat',
         'pagu_diterima',
