@@ -42,10 +42,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Satuan Kerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Data Sub Bidang</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button>
+                    <button type="button" class="btn btn-primary1">Tambah Sub Bidang</button>
                 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -62,7 +62,7 @@
                                         <thead class="thead-dark">
                                           <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Nama Satuan Kerja</th>
+                                            <th scope="col">Nama Sub Bidang</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
@@ -95,7 +95,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>

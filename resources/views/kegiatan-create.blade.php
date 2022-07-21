@@ -42,7 +42,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tambah Satuan Kerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Tambah Kegiatan</h1>
                     </div>
                 
                     <!-- Content Row -->
@@ -57,12 +57,12 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                    <form method="POST" action="/tambah-satker">
+                                    <form method="POST" action="/tambah-kegiatan">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Satuan Kerja</label>
+                                                        <label for="name">Nama Kegiatan</label>
                                                         <input type="text" class="form-control" id="name" name="nama_guru">
                                                     </div>
                                                     <div class="form-group">
@@ -111,7 +111,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>

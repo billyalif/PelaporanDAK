@@ -52,95 +52,96 @@
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                  <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
-                                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Kab.Kediri">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Satuan kerja</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Sub bidang</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="formGroupExampleInput">Volume</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="formGroupExampleInput">Satuan</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="formGroupExampleInput">Kegiatan</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="inputState">State</label>
-                                    <select id="inputState" class="form-control">
-                                      <option selected>Choose...</option>
-                                      <option>...</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Jenis DAK</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>1</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="formGroupExampleInput">Pagu DAK</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rp.">
-                                   
-                                      <div class="btn-toolbar text-center well">
-                                        <div class="mx-auto m-3" style="width: 300px;" >
-                                           
-                                        <button type="button" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-1 margin-left">
-                                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Submit
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-color btn-bg-color btn-sm col-xs-1 margin-left">
-                                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Cancel
-                                        </button></div>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Kab.Kediri">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Satuan kerja</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Sub bidang</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Volume</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Satuan</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Kegiatan</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputState">State</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Jenis DAK</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput">Pagu DAK</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rp.">
+                                        </div>
+                                        <div class="btn-toolbar text-center well">
+                                            <div class="mx-auto m-3" style="width: 300px;" >
+                                                <button type="button" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-1 margin-left">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Submit
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-color btn-bg-color btn-sm col-xs-1 margin-left">
+                                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
 
-                                    </div>
+                                </div>
                                     
                                        
-                                     </div>
-                                  
-                                  </div>
-                                
-
-                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>           
+                        
+            </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>

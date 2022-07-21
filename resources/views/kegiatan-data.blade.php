@@ -63,6 +63,7 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Kegiatan</th>
+                                            <th scope="col">Jumlah Anggaran</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
@@ -72,6 +73,8 @@
                                             <th scope="row">1</th>
                                             {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
                                             <td>
+                                                <a href="" class="btn btn-sm btn-primary">Tambah Anggaran</a>
+                                                <a href="" class="btn btn-sm btn-secondary">Lihat Detail</a>
                                                 <a href="" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
@@ -95,7 +98,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>
