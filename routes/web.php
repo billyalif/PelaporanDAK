@@ -52,3 +52,7 @@ Route::get('/form-laporan', function () {
 Route::get('/super-admin', function () {
     return view('super-admin');
 });
+
+Route::get('/create-kegiatan', function () {
+    return view('create-kegiatan');
+});
