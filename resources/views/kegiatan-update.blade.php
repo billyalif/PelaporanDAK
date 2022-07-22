@@ -42,9 +42,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Ubah Sub Bidang</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <h1 class="h3 mb-0 text-gray-800">Ubah Kegiatan</h1>
                     </div>
                 
                     <!-- Content Row -->
@@ -59,12 +57,12 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      {{-- <form method="POST" action="/update-subbid/{{$data->id_bidang}}"> --}}
+                                      {{-- <form method="POST" action="/update-kegiatan/{{$data->id_bidang}}"> --}}
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Sub Bidang</label>
+                                                        <label for="name">Nama Kegiatan</label>
                                                         {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
                                                     </div>
                                                     {{-- <div class="form-group">
@@ -113,7 +111,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>

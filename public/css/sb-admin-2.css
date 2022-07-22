@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .font {
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 700;
   text-align: left;
   color:white;
 }
@@ -1801,8 +1801,8 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #5a5c69;
-  border-color: #6c6e7e;
+  background-color: #7569DF;
+  border-color: #7569DF;
 }
 
 .table .thead-light th {

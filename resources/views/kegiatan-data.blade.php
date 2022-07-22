@@ -42,60 +42,13 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Laporan</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <h1 class="h3 mb-0 text-gray-800">Data Kegiatan</h1>
                     </div>
 
-                    <div class="row">
-
-                        <div class="col-lg-12">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-4">
-                                    <div style="color:black; text-align:center">
-                                    <h5> Cari Data Laporan </h5>
-                                    <h6> Pilih bulan dan satuan kerja yang anda butuhkan!</h6>
-                                    </div>
-                                    <div class="dropdown" style="text-align:center; margin-top: 1.5rem">
-                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Pilih Bulan
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="#">Action</a>
-                                          <a class="dropdown-item" href="#">Another action</a>
-                                          <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-primary dropdown-toggle" style="padding: 0.5rem 5rem; text-align:left; background-color:#7569DF"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Satuan Kerja
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <button class="btn btn-primary" style="padding: 0.5rem 3rem; text-align:left;"type="button">
-                                            <i class="fas fa-fw fa-search"></i>
-                                                <span> Cari</span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                                {{-- <div class="card-body">
-                                    
-                                </div> --}}
-                            </div>
-
-                        </div>
-                    </div>
-
-                
+                    <button type="button" class="btn btn-primary1">Tambah Kegiatan</button>
                 
                     <!-- Content Row -->
-                    <div class="row">
+                    <div class="row" style="padding-top: 2rem">
 
                         <div class="col-lg-12 mb-4">
 
@@ -108,33 +61,27 @@
                                     <table class="table">
                                         <thead class="thead-dark">
                                           <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama Kegiatan</th>
+                                            <th scope="col">Jumlah Anggaran</th>
+                                            <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
+                                            {{-- @foreach ($data as $bidang) --}}
                                           <tr>
                                             <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <td>
+                                                <a href="" class="btn btn-sm btn-primary">Tambah Anggaran</a>
+                                                <a href="" class="btn btn-sm btn-secondary">Lihat Detail</a>
+                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                            </td>
                                           </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                          </tr>
+                                          {{-- @endforeach --}}
                                         </tbody>
-                                      </table>
+                                    </table>
                                 </div>
                             </div>
 
@@ -151,7 +98,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>
@@ -194,7 +141,8 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<!-- Custom scripts for all pages-->
+
+    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->

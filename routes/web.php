@@ -26,23 +26,23 @@ Route::get('/admin', function () {
 });
 
 Route::get('/data-laporan', function () {
-    return view('data-laporan');
+    return view('laporan-data');
 });
 
 Route::get('/data-bidang', function () {
-    return view('data-bidang');
+    return view('bidang-data');
 });
 
 Route::get('/data-satker', function () {
-    return view('data-satker');
+    return view('satker-data');
 });
 
 Route::get('/data-subbid', function () {
-    return view('data-subbid');
+    return view('subbid-data');
 });
 
 Route::get('/data-kegiatan', function () {
-    return view('data-kegiatan');
+    return view('kegiatan-data');
 });
 
 Route::get('/form-laporan', function () {
@@ -51,4 +51,8 @@ Route::get('/form-laporan', function () {
 
 Route::get('/super-admin', function () {
     return view('super-admin');
+});
+
+Route::get('/create-kegiatan', function () {
+    return view('create-kegiatan');
 });

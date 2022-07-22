@@ -42,15 +42,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Sub Bidang</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <h1 class="h3 mb-0 text-gray-800">Tambah Sub Bidang</h1>
                     </div>
-
-                    <button type="button" class="btn btn-primary1">Tambah Sub Bidang</button>
                 
                     <!-- Content Row -->
-                    <div class="row" style="padding-top: 2rem">
+                    <div class="row" style="padding-top: 0rem">
 
                         <div class="col-lg-12 mb-4">
 
@@ -60,27 +56,45 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Laporan</h6>
                                 </div> --}}
                                 <div class="card-body">
-                                    <table class="table">
-                                        <thead class="thead-dark">
-                                          <tr>
-                                            <th scope="col">No</th>
-                                            <th scope="col">Nama Sub Bidang</th>
-                                            <th scope="col">Aksi</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                            {{-- @foreach ($data as $bidang) --}}
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
-                                            <td>
-                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
-                                            </td>
-                                          </tr>
-                                          {{-- @endforeach --}}
-                                        </tbody>
-                                    </table>
+
+                                    <form method="POST" action="/tambah-subbid">
+                                        @csrf
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="name">Nama Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="name" name="nama_guru">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="tgl_lahir">No Hp</label>
+                                                        <input type="text" class="form-control" id="hp" name="hp">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="gender">Gender</label>
+                                                        <select class="form-control" id="gender" name="gender">
+                                                        <option>L</option>
+                                                        <option>P</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="kota_lahir">Email</label>
+                                                        <input type="email" class="form-control" id="email" name="email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="nama_ortu">Status Aktif</label>
+                                                        <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
+                                                    </div>
+
+                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                </div>
+                                                {{-- <div class="row">
+                                                  <div class="col-lg-6">
+                                                  <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
+                                                  </div>
+                                                </div> --}}
+                              
+                                            </div>
+                                        </form>
                                 </div>
                             </div>
 
@@ -97,7 +111,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; E-SIDAK 2022</span>
                     </div>
                 </div>
             </footer>
