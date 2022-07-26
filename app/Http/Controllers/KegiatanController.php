@@ -39,11 +39,15 @@ class KegiatanController extends Controller
     }
 
     public function edit(){
-
+        $kegiatan   = Kegiatan::all();
+        return view('kegiatan-update',[
+            'title' => 'Edit Kegiatan',
+            'kegiatan' => $kegiatan
+        ]);
     }
 
     public function update(){
-
+        
     }
 
     public function destroy(){
