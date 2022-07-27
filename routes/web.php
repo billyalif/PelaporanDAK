@@ -1,6 +1,21 @@
 <?php
 
+use App\Http\Controllers\AnggaranController;
+use App\Http\Controllers\BatchController;
+use App\Http\Controllers\BidangController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\DakController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EditController;
+use App\Http\Controllers\FormLaporanController;
+use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SatkerController;
+use App\Http\Controllers\SubBidangController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,14 +53,18 @@ Route::get('/data-laporan', function () {
 });
 
 //Bidang
-Route::get('/data-bidang', function () {
-    return view('bidang-data');
-});
+// Route::get('/data-bidang', function () {
+//     return view('bidang-data');
+// });
+// Route::get('/data-bidang', function(){
+//     $allSantri = App\Models\Bidang::all();
+//     return view('bidang-data', ["title" => "Data Bidang",'data' => $allBidang]);
+//   });
 Route::get('/bidang',[BidangController::class,"index"]);
-Route::get('/form-bidang',[BidangController::class,"form"]);
-Route::post('/tambah-bidang',[BidangController::class,"insert"]);
-Route::get('/hapus-bidang/{id}',[BidangController::class, 'delete']);
-Route::get('/ubah-bidang/{id}',[BidangController::class, 'formUpdate']);
+Route::get('/form-bidang',[BidangController::class,"insert"]);
+Route::post('/tambah-bidang',[BidangController::class,"store"]);
+Route::get('/hapus-bidang/{id}',[BidangController::class, 'destroy']);
+Route::get('/ubah-bidang/{id}',[BidangController::class, 'edit']);
 Route::post('/ubah-bidang/{id}',[BidangController::class, 'update']);
 
 //Satker
