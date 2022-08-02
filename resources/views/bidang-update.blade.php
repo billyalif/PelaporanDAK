@@ -57,7 +57,7 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      {{-- <form method="POST" action="/update-bidang/{{$data->id_bidang}}"> --}}
+                                      <form method="POST" action="/ubah-bidang/{{$data->id}}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">

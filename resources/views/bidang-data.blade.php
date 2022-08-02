@@ -67,16 +67,17 @@
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            {{-- @foreach ($data as $bidang) --}}
+                                            @php $no = 1; @endphp
+                                            @foreach ($allBidang as $bidang)
                                           <tr>
-                                            <th scope="row">1</th>
-                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <th>{{ $bidang->$no++ }}</th> 
+                                            <td>{{ $bidang->$nama_bidang }}</td>
                                             <td>
-                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
-                                          {{-- @endforeach --}}
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>
