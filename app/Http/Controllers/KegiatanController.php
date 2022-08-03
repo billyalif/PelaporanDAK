@@ -28,7 +28,7 @@ class KegiatanController extends Controller
     public function store(Request $request){
         $validatedData = $request->validate([
             'nama_kegiatan'  => 'required|max:100',
-            'deskripsi kegiatan' => 'required',
+            'deskripsi_kegiatan' => 'required',
             'created_at' => date("Y-m-d H:i:s")
         ]);
 

@@ -63,23 +63,25 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Kegiatan</th>
-                                            <th scope="col">Jumlah Anggaran</th>
+                                            <th scope="col">Deskripsi Kegiatan</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            {{-- @foreach ($data as $bidang) --}}
+                                            @php $no = 1; @endphp
+                                            @foreach ($tabel_kegiatan as $kegiatan)
                                           <tr>
-                                            <th scope="row">1</th>
-                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <th>{{ $kegiatan->$no++ }}</th>
+                                            <td>{{ $kegiatan->$nama_kegiatan }}</td>
+                                            <td>{{ $kegiatan->$deskripsi_kegiatan }}</td>
                                             <td>
                                                 <a href="" class="btn btn-sm btn-primary">Tambah Anggaran</a>
                                                 <a href="" class="btn btn-sm btn-secondary">Lihat Detail</a>
-                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/hapus-satker/{id}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-satker/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
-                                          {{-- @endforeach --}}
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>

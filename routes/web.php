@@ -53,13 +53,6 @@ Route::get('/data-laporan', function () {
 });
 
 //Bidang
-// Route::get('/data-bidang', function () {
-//     return view('bidang-data');
-// });
-// Route::get('/data-bidang', function(){
-//     $allSantri = App\Models\Bidang::all();
-//     return view('bidang-data', ["title" => "Data Bidang",'data' => $allBidang]);
-//   });
 Route::get('/bidang',[BidangController::class,"index"]);
 Route::get('/form-bidang',[BidangController::class,"insert"]);
 Route::post('/tambah-bidang',[BidangController::class,"store"]);
@@ -68,36 +61,27 @@ Route::get('/ubah-bidang/{id}',[BidangController::class, 'edit']);
 Route::post('/ubah-bidang/{id}',[BidangController::class, 'update']);
 
 //Satker
-Route::get('/data-satker', function () {
-    return view('satker-data');
-});
 Route::get('/satker',[SatkerController::class,"index"]);
-Route::get('/form-satker',[SatkerController::class,"form"]);
-Route::post('/tambah-satker',[SatkerController::class,"insert"]);
+Route::get('/form-satker',[SatkerController::class,"insert"]);
+Route::post('/tambah-satker',[SatkerController::class,"store"]);
 Route::get('/hapus-satker/{id}',[SatkerController::class, 'delete']);
-Route::get('/ubah-satker/{id}',[SatkerController::class, 'formUpdate']);
+Route::get('/ubah-satker/{id}',[SatkerController::class, 'edit']);
 Route::post('/ubah-satker/{id}',[SatkerController::class, 'update']);
 
 //Subbid
-Route::get('/data-subbid', function () {
-    return view('subbid-data');
-});
 Route::get('/subbid',[SubBidangController::class,"index"]);
-Route::get('/form-subbid',[SubBidangController::class,"form"]);
-Route::post('/tambah-subbid',[SubBidangController::class,"insert"]);
+Route::get('/form-subbid',[SubBidangController::class,"insert"]);
+Route::post('/tambah-subbid',[SubBidangController::class,"store"]);
 Route::get('/hapus-subbid/{id}',[SubBidangController::class, 'delete']);
-Route::get('/ubah-subbid/{id}',[SubBidangController::class, 'formUpdate']);
+Route::get('/ubah-subbid/{id}',[SubBidangController::class, 'edit']);
 Route::post('/ubah-subbid/{id}',[SubBidangController::class, 'update']);
 
 //Kegiatan
-Route::get('/data-kegiatan', function () {
-    return view('kegiatan-data');
-});
 Route::get('/kegiatan',[KegiatanController::class,"index"]);
-Route::get('/form-kegiatan',[KegiatanController::class,"form"]);
-Route::post('/tambah-kegiatan',[KegiatanController::class,"insert"]);
+Route::get('/form-kegiatan',[KegiatanController::class,"insert"]);
+Route::post('/tambah-kegiatan',[KegiatanController::class,"store"]);
 Route::get('/hapus-kegiatan/{id}',[KegiatanController::class, 'delete']);
-Route::get('/ubah-kegiatan/{id}',[KegiatanController::class, 'formUpdate']);
+Route::get('/ubah-kegiatan/{id}',[KegiatanController::class, 'edit']);
 Route::post('/ubah-kegiatan/{id}',[KegiatanController::class, 'update']);
 
 Route::get('/form-laporan', function () {

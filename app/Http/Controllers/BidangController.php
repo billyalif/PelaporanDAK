@@ -30,7 +30,6 @@ class BidangController extends Controller
         $validatedData = $request->validate([
             'id_satker'     => 'required',
             'nama_bidang'   => 'required',
-            'jenis_bidang'  => 'required',
             'created_at'    => date("Y-m-d H:i:s"),
         ]);
 
