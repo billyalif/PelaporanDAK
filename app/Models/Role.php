@@ -9,7 +9,7 @@ class Role extends Model
 {
     use HasFactory;
 
-    protected $table = 'role';
+    protected $table = 'tabel_role';
     protected $primarykey = 'id';
     protected $fillables = ['nama_role'];
 

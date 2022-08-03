@@ -9,7 +9,7 @@ class Satker extends Model
 {
     use HasFactory;
 
-    protected $table = 'satker';
+    protected $table = 'tabel_satker';
     protected $primarykey = 'id';
     protected $fillable = [
         'nama_satker',

@@ -9,7 +9,7 @@ class Subbidang extends Model
 {
     use HasFactory;
 
-    protected $table = 'subbidang';
+    protected $table = 'tabel_subbidang';
     protected $primarykey = 'id';
     protected $fillable = [
         'nama_subbidang',

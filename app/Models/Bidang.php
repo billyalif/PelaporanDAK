@@ -9,7 +9,7 @@ class Bidang extends Model
 {
     use HasFactory;
 
-    protected  $table = 'bidang';
+    protected  $table = 'tabel_bidang';
     protected $primaryKey = 'id';
     protected $fillables = [
         'nama_bidang',

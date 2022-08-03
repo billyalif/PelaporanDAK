@@ -63,15 +63,17 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Bidang</th>
+                                            <th scope="col">Alamat</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
                                             @php $no = 1; @endphp
-                                            @foreach ($allBidang as $bidang)
+                                            @foreach ($tabel_bidang as $bidang)
                                           <tr>
                                             <th>{{ $bidang->$no++ }}</th> 
                                             <td>{{ $bidang->$nama_bidang }}</td>
+                                            <td>{{ $bidang->$alamat_ }}
                                             <td>
                                                 <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>

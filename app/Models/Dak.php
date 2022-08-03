@@ -9,7 +9,7 @@ class Dak extends Model
 {
     use HasFactory;
 
-    protected $table = 'dak';
+    protected $table = 'tabel_dak';
     protected $primarykey = 'id';
     protected $fillables = ['nama_dak'];
 

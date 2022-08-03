@@ -9,7 +9,7 @@ class Batch extends Model
 {
     use HasFactory;
 
-    protected  $table = 'batch';
+    protected  $table = 'tabel_batch';
     protected $primaryKey = 'id';
     protected $fillables = [
         'triwulan_batch',
