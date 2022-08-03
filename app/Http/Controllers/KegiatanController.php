@@ -17,6 +17,7 @@ class KegiatanController extends Controller
         return view('kegiatan-data',
             ['tabel_kegiatan'=>$tabel_kegiatan],
             ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_anggaran]);
+            ['title' => 'Data Kegiatan'];
     }
 
 
