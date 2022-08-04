@@ -64,9 +64,9 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Satuan Kerja</th>
-                                            <th scope="col">Alamat Satuan Kerja</th>
-                                            <th scope="col">No. Telp Satuan Kerja</th>
-                                            <th scope="col">PJ Satuan Kerja</th>
+                                            <th scope="col">Alamat</th>
+                                            <th scope="col">No. Telp</th>
+                                            <th scope="col">Penanggung Jawab</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>

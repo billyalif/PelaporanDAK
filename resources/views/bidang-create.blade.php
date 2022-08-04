@@ -42,9 +42,9 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tambah Bidang</h1>
+                        <h1 class="h3 mb-2 text-gray-800 font-weight-bold">Tambah Bidang</h1>
                     </div>
-                
+
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 0rem">
 
@@ -61,9 +61,18 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="nama_bidang">Nama Bidang</label>
+                                                    <div class="form-group font-weight-bold">
+                                                        <label for="nama_bidang">1. Nama Bidang</label>
                                                         <input type="text" class="form-control" id="nama_bidang" name="nama_bidang">
+                                                        <h6 class="font-italic">Isikan sesuai nama bidang yang ada di dalam Satker</h6>
+                                                        <h6 class="font-italic">Contoh : Pertanian Umum</h6>
+                                                    </div>
+
+                                                    <div class="form-group font-weight-bold">
+                                                        <label for="pj_bidang">2. Penanggung Jawab Bidang</label>
+                                                        <input type="text" class="form-control" id="pj_bidang" name="pj_bidang">
+                                                        <h6 class="font-italic">Isikan sesuai nama penanggung jawab bidang. Jika tidak ada, isikan nama Kepala Bidang</h6>
+                                                        <h6 class="font-italic">Contoh : Supriyatno, M. Sc</h6>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="jenis_bidang">Jenis Bidang</label>
@@ -93,7 +102,7 @@
                                                   <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
                                                   </div>
                                                 </div> --}}
-                              
+
                                             </div>
                                         </form>
                                 </div>

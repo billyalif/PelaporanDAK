@@ -42,12 +42,13 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Bidang</h1>
+                        <h1 class="h3 mb-2 text-gray-800 font-weight-bold">Data Bidang</h1>
                     </div>
+                    <h6>Berikut adalah bidang-bidang dalam satuan kerja .... (tolong benerin) </h6>
 
                     {{-- <button type="button" class="btn btn-primary1" href="/form-bidang">Tambah Bidang</button> --}}
                     <a href="/form-bidang" type="button" class="btn btn-primary1">Tambah Bidang</a>
-                
+
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 
@@ -64,6 +65,7 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Bidang</th>
+                                            <th scope="col">Penanggung Jawab</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
@@ -71,7 +73,7 @@
                                             @php $no = 1; @endphp
                                             @foreach ($tabel_bidang as $bidang)
                                           <tr>
-                                            <th>{{ $bidang->$no++ }}</th> 
+                                            <th>{{ $bidang->$no++ }}</th>
                                             <td>{{ $bidang->$nama_bidang }}</td>
                                             <td>
                                                 <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>

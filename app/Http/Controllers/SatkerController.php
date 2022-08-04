@@ -19,7 +19,7 @@ class SatkerController extends Controller
 
 
     public function insert(){
-        $kk = User::all();
+        $kk = TabelUser::all();
         return view('satker-create');
         ['title' => 'Tambah Satker'];
     }
