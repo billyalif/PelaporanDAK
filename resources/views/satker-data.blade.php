@@ -46,7 +46,7 @@
                     </div>
 
                     <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button>
-                
+
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 

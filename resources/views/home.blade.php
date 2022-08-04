@@ -25,7 +25,7 @@
                 </a>
             </div>
         </nav>
-    
+
         <a>
             <img class ="kiri" src="../img/Group 2.svg" width="475" height="475" style="mt-6"/>
         </a>
@@ -38,9 +38,10 @@
                 <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
                 <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
             </div> --}}
-            
+
             <a class="btn1 btn-masuk" href="{{ url('login') }}">   MASUK   </a>
+            <a class="btn1 btn-masuk" href="{{ url('satker') }}">   Home   </a>
         </div>
-        
+
     </body>
 </html>
