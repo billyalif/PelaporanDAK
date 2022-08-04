@@ -45,7 +45,8 @@
                         <h1 class="h3 mb-0 text-gray-800">Data Satuan Kerja</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button>
+                    {{-- <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button> --}}
+                    <a href="/form-satker" type="button" class="btn btn-primary1">Tambah Satuan Kerja</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -63,20 +64,27 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Satuan Kerja</th>
+                                            <th scope="col">Alamat Satuan Kerja</th>
+                                            <th scope="col">No. Telp Satuan Kerja</th>
+                                            <th scope="col">PJ Satuan Kerja</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            {{-- @foreach ($data as $bidang) --}}
+                                            @php $no = 1; @endphp
+                                            @foreach ($tabel_satker as $satker)
                                           <tr>
-                                            <th scope="row">1</th>
-                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <th>{{ $satker->$no++ }}</th>
+                                            <td>{{ $satker->$nama_satker }}</td>
+                                            <td>{{ $satker->$alamat_satker }}</td>
+                                            <td>{{ $satker->$notelp_satker }}</td>
+                                            <td>{{ $satker->$pj_satker }}</td>
                                             <td>
-                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/hapus-satker/{id}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-satker/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
-                                          {{-- @endforeach --}}
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>

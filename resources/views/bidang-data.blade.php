@@ -45,7 +45,8 @@
                         <h1 class="h3 mb-0 text-gray-800">Data Bidang</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Bidang</button>
+                    {{-- <button type="button" class="btn btn-primary1" href="/form-bidang">Tambah Bidang</button> --}}
+                    <a href="/form-bidang" type="button" class="btn btn-primary1">Tambah Bidang</a>
                 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -63,7 +64,6 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Bidang</th>
-                                            <th scope="col">Alamat</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
@@ -73,10 +73,9 @@
                                           <tr>
                                             <th>{{ $bidang->$no++ }}</th> 
                                             <td>{{ $bidang->$nama_bidang }}</td>
-                                            <td>{{ $bidang->$alamat_ }}
                                             <td>
                                                 <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
                                           @endforeach

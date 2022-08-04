@@ -62,30 +62,32 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Satuan Kerja</label>
-                                                        <input type="text" class="form-control" id="name" name="nama_guru">
+                                                        <label for="nama_satker">Nama Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="nama_satker" name="nama_satker">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="tgl_lahir">No Hp</label>
-                                                        <input type="text" class="form-control" id="hp" name="hp">
+                                                        <label for="alamat_satker">Alamat Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="alamat_satker" name="alamat_satker">
                                                     </div>
-                                                    <div class="form-group">
-                                                    <label for="gender">Gender</label>
+                                                    {{-- <div class="form-group">
+                                                    <label for="gender">No. Telp Satuan Kerja</label>
                                                         <select class="form-control" id="gender" name="gender">
                                                         <option>L</option>
                                                         <option>P</option>
                                                         </select>
+                                                    </div> --}}
+                                                    <div class="form-group">
+                                                        <label for="notelp_satker">No. Telp Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="notelp_satker" name="notelp_satker">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="kota_lahir">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="nama_ortu">Status Aktif</label>
-                                                        <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
+                                                        <label for="pj_satker">PJ Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="pj_satker" name="pj_satker">
                                                     </div>
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/satker" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
+                
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

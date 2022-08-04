@@ -17,6 +17,7 @@ class KegiatanController extends Controller
         return view('kegiatan-data',
             ['tabel_kegiatan'=>$tabel_kegiatan],
             ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_anggaran]);
+            ['title' => 'Data Kegiatan'];
     }
 
 
@@ -28,7 +29,7 @@ class KegiatanController extends Controller
     public function store(Request $request){
         $validatedData = $request->validate([
             'nama_kegiatan'  => 'required|max:100',
-            'deskripsi kegiatan' => 'required',
+            'deskripsi_kegiatan' => 'required',
             'created_at' => date("Y-m-d H:i:s")
         ]);
 

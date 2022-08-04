@@ -62,14 +62,14 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group">
-                                                        <label for="name">Nama Bidang</label>
-                                                        <input type="text" class="form-control" id="name" name="nama_guru">
+                                                        <label for="nama_bidang">Nama Bidang</label>
+                                                        <input type="text" class="form-control" id="nama_bidang" name="nama_bidang">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="tgl_lahir">No Hp</label>
-                                                        <input type="text" class="form-control" id="hp" name="hp">
-                                                    </div>
-                                                    <div class="form-group">
+                                                    {{-- <div class="form-group">
+                                                        <label for="jenis_bidang">Jenis Bidang</label>
+                                                        <input type="text" class="form-control" id="jenis_bidang" name="jenis_bidang">
+                                                    </div> --}}
+                                                    {{-- <div class="form-group">
                                                     <label for="gender">Gender</label>
                                                         <select class="form-control" id="gender" name="gender">
                                                         <option>L</option>
@@ -83,9 +83,10 @@
                                                     <div class="form-group">
                                                         <label for="nama_ortu">Status Aktif</label>
                                                         <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
-                                                    </div>
+                                                    </div> --}}
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/bidang" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

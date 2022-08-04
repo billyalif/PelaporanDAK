@@ -32,7 +32,6 @@ class SatkerController extends Controller
             'alamat_satker'  => 'required|max:150',
             'notelp_satker'  => 'required|max:13',
             'pj_satker'  => 'required|max:100',
-            'deskripsi kegiatan' => 'required',
             'created_at' => date("Y-m-d H:i:s")
         ]);
 
