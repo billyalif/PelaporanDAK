@@ -42,9 +42,9 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tambah Satuan Kerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Tambah Satuan Kerja</h1>
                     </div>
-                
+
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 0rem">
 
@@ -61,11 +61,11 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
+                                                    <div class="form-group font-weight-bold">
                                                         <label for="nama_satker">Nama Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="nama_satker" name="nama_satker">
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group font-weight-bold">
                                                         <label for="alamat_satker">Alamat Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="alamat_satker" name="alamat_satker">
                                                     </div>
@@ -76,25 +76,25 @@
                                                         <option>P</option>
                                                         </select>
                                                     </div> --}}
-                                                    <div class="form-group">
+                                                    <div class="form-group font-weight-bold">
                                                         <label for="notelp_satker">No. Telp Satuan Kerja</label>
-                                                        <input type="text" class="form-control" id="notelp_satker" name="notelp_satker">
+                                                        <input type="number" class="form-control" id="notelp_satker" name="notelp_satker">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="pj_satker">PJ Satuan Kerja</label>
+                                                    <div class="form-group font-weight-bold">
+                                                        <label for="pj_satker">Penanggung Jawab</label>
                                                         <input type="text" class="form-control" id="pj_satker" name="pj_satker">
                                                     </div>
 
                                                     {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
                                                     <a href="/satker" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
-                
+
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">
                                                   <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
                                                   </div>
                                                 </div> --}}
-                              
+
                                             </div>
                                         </form>
                                 </div>
