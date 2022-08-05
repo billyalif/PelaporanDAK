@@ -94,7 +94,11 @@ Route::get('/ubah-anggaran/{id}',[AnggaranController::class, 'edit']);
 Route::post('/ubah-anggaran/{id}',[AnggaranController::class, 'update']);
 
 Route::get('/form-laporan', function () {
-    return view('formlaporan');
+    return view('formlaporan-depan');
+});
+
+Route::get('/anggaran-kegiatan', function () {
+    return view('anggaran-kegiatan');
 });
 
 Route::get('/super-admin', function () {

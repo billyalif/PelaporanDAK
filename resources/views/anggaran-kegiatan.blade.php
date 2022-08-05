@@ -12,7 +12,7 @@
     <title>E-SIDAK</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');"
         rel="stylesheet">
@@ -53,65 +53,58 @@
                             <div class="card shadow mb-4">
                                 <div class="card-body">
                                     <form>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Kab.Kediri">
-                                           
+                                            <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="Kab. Kediri">
+
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="exampleFormControlSelect1">Satuan kerja</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                            <h6 class="font-italic">Isikan satuan kerja sesuai dengan Provinsi/Kab/Kota</h6>
-                                            <h6 class="font-italic">Contoh : Dinas Pendidikan Prov Jatim</h6>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="Dinas Pendidikan Kab. Kediri">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Sub bidang</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                            <h6 class="font-italic">Isikan sub bidang sesuai dengan satuan kerja yang dipilih </h6>
-                                            <h6 class="font-italic">Contoh : TK, SD SMP</h6>
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlSelect1">Bidang</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="Penyusunan Program">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlSelect1">Sub Bidang</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="Keuangan">
+                                        </div>
+
+
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="formGroupExampleInput">Volume</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                                            <h6 class="font-italic">isikan volume yang sesuai dengan sub bidang</h6>
-                                            <h6 class="font-italic">Contoh : 1</h6>
+                                            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            <h6 class="font-italic">Isikan volume yang sesuai dengan kegiatan</h6>
+                                            <h6 class="font-italic">Contoh : 30</h6>
                                         </div>
-                                        <div class="form-group">
+                                        {{-- Satuan --}}
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="formGroupExampleInput">Satuan</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            <h6 class="font-italic">Isikan sesuai nama satuan</h6>
+                                            <h6 class="font-italic">Contoh : Mobil</h6>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="formGroupExampleInput">Kegiatan</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
                                             <h6 class="font-italic">Isikan kegiatan yang sudah berjalan  </h6>
-                                            <h6 class="font-italic">Contoh : pembelian alat tulis</h6>
+                                            <h6 class="font-italic">Contoh : Pembelian alat tulis</h6>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                            <h6 class="font-italic">isikan rencana kegiatan secara detail</h6>
+                                            <h6 class="font-italic">Isikan rencana kegiatan secara detail</h6>
                                             <h6 class="font-italic">Contoh : Pembelian alat tulis menghabiskan anggaran sebesar Rp.5.000.000  </h6>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="inputState">State</label>
                                             <select id="inputState" class="form-control">
                                                 <option selected>Choose...</option>
                                                 <option>...</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group" style="font-weight:700">
                                             <label for="exampleFormControlSelect1">Jenis DAK</label>
                                             <select class="form-control" id="exampleFormControlSelect1">
                                                 <option>1</option>
@@ -121,7 +114,7 @@
                                                 <option>5</option>
                                             </select>
                                             <h6 class="font-italic">isikan jenis DAK sesuai dengan kegiatan </h6>
-                                            <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>   
+                                            <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Pagu DAK</label>
@@ -142,13 +135,13 @@
                                     </form>
 
                                 </div>
-                                    
-                                       
+
+
                             </div>
                         </div>
                     </div>
-                </div>           
-                        
+                </div>
+
             </div>
             <!-- End of Main Content -->
 

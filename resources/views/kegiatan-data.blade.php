@@ -46,7 +46,8 @@
                     </div>
 
                     <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
-                    <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
+                    <a href="/form-laporan" type="button" class="btn btn-primary1">Form Laporan (akses dari home)</a>
+                    <a href="/anggaran-kegiatan" type="button" class="btn btn-primary1">Form Laporan (akses dari kegiatan)</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
