@@ -15,6 +15,7 @@ class SatkerController extends Controller
         return view('satker-data',
             ['tabel_satker'=>$tabel_satker],
             ['tabel_user'=>$tabel_user]);
+            ['title' => 'Data Satker'];
     }
 
 
@@ -44,7 +45,7 @@ class SatkerController extends Controller
     public function edit(){
         $kegiatan   = Satker::all();
         return view('kegiatan-update',[
-            'title' => 'Edit Kegiatan',
+            'title' => 'Edit Satker',
             'kegiatan' => $kegiatan
         ]);
     }

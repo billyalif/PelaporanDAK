@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,11 +61,11 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="nama_satker">Nama Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="nama_satker" name="nama_satker">
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="alamat_satker">Alamat Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="alamat_satker" name="alamat_satker">
                                                     </div>
@@ -76,11 +76,11 @@
                                                         <option>P</option>
                                                         </select>
                                                     </div> --}}
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="notelp_satker">No. Telp Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="notelp_satker" name="notelp_satker">
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="pj_satker">PJ Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="pj_satker" name="pj_satker">
                                                     </div>

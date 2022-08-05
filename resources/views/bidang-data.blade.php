@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -75,6 +75,7 @@
                                           <tr>
                                             <th>{{ $bidang->$no++ }}</th>
                                             <td>{{ $bidang->$nama_bidang }}</td>
+                                            <td>{{ $bidang->$pj_bidang }}</td>
                                             <td>
                                                 <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="/ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>
