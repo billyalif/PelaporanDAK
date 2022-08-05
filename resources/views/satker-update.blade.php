@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,13 +57,25 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      {{-- <form method="POST" action="/update-satker/{{$data->id_bidang}}"> --}}
+                                      <form method="POST" action="/update-satker/{{$satker->id}}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama Satuan Kerja</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="nama_satker">Nama Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="nama_satker" name="nama_satker" value={{$data['nama_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="alamat_satker">Alamat Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="alamat_satker" name="alamat_satker" value={{$data['alamat_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="notelp_satker">No. Telp Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="notelp_satker" name="notelp_satker" value={{$data['notelp_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="pj_satker">Penanggung Jawab Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="pj_satker" name="pj_satker" value={{$data['pj_satker']}}>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
@@ -85,7 +97,8 @@
                                                         <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
                                                     </div> --}}
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/satker" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

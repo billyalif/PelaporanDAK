@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,13 +57,17 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      <form method="POST" action="/ubah-bidang/{{$data->id}}">
+                                      <form method="POST" action="/ubah-bidang/{{$bidang->id}}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama Bidang</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="nama_bidang">Nama Bidang</label>
+                                                        <input type="text" class="form-control" id="nama_bidang" name="nama_bidang" value={{$data['nama_bidang']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="pj_bidang">Penanggung Jawab Bidang</label>
+                                                        <input type="text" class="form-control" id="pj_bidang" name="pj_bidang" value={{$data['pj_bidang']}}>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
@@ -85,7 +89,8 @@
                                                         <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
                                                     </div> --}}
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/bidang" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

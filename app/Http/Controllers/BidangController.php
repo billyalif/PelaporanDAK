@@ -14,6 +14,7 @@ class BidangController extends Controller
         return view('bidang-data',
             ['tabel_bidang'=>$tabel_bidang],
             ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_satker]);
+            ['title' => 'Data Bidang'];
     }
 
     public function insert(){

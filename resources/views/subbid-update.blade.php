@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,15 +61,11 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama Sub Bidang</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
-                                                    </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="nama_subbidang">Nama Sub Bidang</label>
                                                         <input type="text" class="form-control" id="nama_subbidang" name="nama_subbidang" value={{ $subbidang['nama_subbidang'] }}>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="deskripsi_subbidang">Deskripsi Sub Bidang</label>
                                                         <input type="text" class="form-control" id="deskripsi_subbidang" name="deskripsi_subbidang" value={{ $subbidang['deskripsi_subbidang'] }}>
                                                     </div>

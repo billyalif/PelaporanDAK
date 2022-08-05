@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,13 +57,17 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      {{-- <form method="POST" action="/update-kegiatan/{{$data->id_bidang}}"> --}}
+                                      <form method="POST" action="/update-kegiatan/{{$kegiatan->id}}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama Kegiatan</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="nama_kegiatan">Nama Kegiatan</label>
+                                                        <input type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan" value={{$data['nama_kegiatan']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="deskripsi_kegiatan">Deskripsi Kegiatan</label>
+                                                        <input type="text" class="form-control" id="deskripsi_kegiatan" name="deskripsi_kegiatan" value={{$data['deskripsi_kegiatan']}}>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
