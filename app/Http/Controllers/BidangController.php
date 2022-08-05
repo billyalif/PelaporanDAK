@@ -10,11 +10,11 @@ class BidangController extends Controller
 {
     public function index(){
         $tabel_bidang = Bidang::all();
-        $tabel_kegiatan_satker = Satker::all();
+        $tabel_satker = Satker::all();
         return view('bidang-data',
-            ['tabel_bidang'=>$tabel_bidang],
-            ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_satker]);
-            ['title' => 'Data Bidang'];
+            ['tabel_bidang'=>$tabel_bidang,
+            'tabel_satker'=>$tabel_satker,
+            'title' => 'Data Bidang']);
     }
 
     public function insert(){

@@ -44,10 +44,10 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-2 text-gray-800 font-weight-bold">Data Bidang</h1>
                     </div>
-                    <h6>Berikut adalah bidang-bidang dalam satuan kerja .... (tolong benerin) </h6>
 
                     {{-- <button type="button" class="btn btn-primary1" href="/form-bidang">Tambah Bidang</button> --}}
                     <a href="/form-bidang" type="button" class="btn btn-primary1">Tambah Bidang</a>
+                    <a href="/subbid" type="button" class="btn btn-primary1">Masuk ke Subbidang</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">

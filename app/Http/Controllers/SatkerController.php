@@ -13,16 +13,16 @@ class SatkerController extends Controller
         $tabel_satker = Satker::all();
         $tabel_user= TabelUser::all();
         return view('satker-data',
-            ['tabel_satker'=>$tabel_satker],
-            ['tabel_user'=>$tabel_user]);
-            ['title' => 'Data Satker'];
+            ['tabel_satker'=>$tabel_satker,
+            'tabel_user'=>$tabel_user,
+            'title' => 'Data Satker']);
     }
 
 
     public function insert(){
         $kk = TabelUser::all();
-        return view('satker-create');
-        ['title' => 'Tambah Satker'];
+        return view('satker-create',
+        ['title' => 'Tambah Satker']);
     }
 
 

@@ -45,8 +45,8 @@
                         <h1 class="h3 mb-0 text-gray-800">Data Sub Bidang</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Sub Bidang</button>
-                
+                    <a href="/form-subbid" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
+                    <a href="/kegiatan" type="button" class="btn btn-primary1">Masuk ke Kegiatan</a>
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 

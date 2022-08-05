@@ -47,6 +47,7 @@
 
                     {{-- <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button> --}}
                     <a href="/form-satker" type="button" class="btn btn-primary1">Tambah Satuan Kerja</a>
+                    <a href="/bidang" type="button" class="btn btn-primary1">Masuk ke Bidang</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">

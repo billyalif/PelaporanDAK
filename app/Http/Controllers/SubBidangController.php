@@ -12,13 +12,14 @@ class SubBidangController extends Controller
         $tabel_subbidang = Subbidang::all();
         $tabel_bidang = Bidang::all();
         return view('subbid-data',
-            ['tabel_subbidang'=>$tabel_subbidang],
-            ['tabel_bidang'=>$tabel_bidang]);
+            ['tabel_subbidang'=>$tabel_subbidang,
+            'tabel_bidang'=>$tabel_bidang,
+            'title' => 'Data Sub-Bidang']);
     }
 
     public function insert(){
         $bidang = Bidang::all();
-        return view('bidang-create',[
+        return view('subbid-create',[
             'title' => 'Tambah Bidang',
             'bidang' => $bidang
         ]);
