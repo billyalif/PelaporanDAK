@@ -56,6 +56,7 @@
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Kab.Kediri">
+                                           
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Satuan kerja</label>
@@ -66,6 +67,8 @@
                                                 <option>4</option>
                                                 <option>5</option>
                                             </select>
+                                            <h6 class="font-italic">Isikan satuan kerja sesuai dengan Provinsi/Kab/Kota</h6>
+                                            <h6 class="font-italic">Contoh : Dinas Pendidikan Prov Jatim</h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Sub bidang</label>
@@ -76,10 +79,14 @@
                                                 <option>4</option>
                                                 <option>5</option>
                                             </select>
+                                            <h6 class="font-italic">Isikan sub bidang sesuai dengan satuan kerja yang dipilih </h6>
+                                            <h6 class="font-italic">Contoh : TK, SD SMP</h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Volume</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            <h6 class="font-italic">isikan volume yang sesuai dengan sub bidang</h6>
+                                            <h6 class="font-italic">Contoh : 1</h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Satuan</label>
@@ -88,10 +95,14 @@
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Kegiatan</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            <h6 class="font-italic">Isikan kegiatan yang sudah berjalan  </h6>
+                                            <h6 class="font-italic">Contoh : pembelian alat tulis</h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlTextarea1">Rincian Kegiatan</label>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <h6 class="font-italic">isikan rencana kegiatan secara detail</h6>
+                                            <h6 class="font-italic">Contoh : Pembelian alat tulis menghabiskan anggaran sebesar Rp.5.000.000  </h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputState">State</label>
@@ -109,10 +120,14 @@
                                                 <option>4</option>
                                                 <option>5</option>
                                             </select>
+                                            <h6 class="font-italic">isikan jenis DAK sesuai dengan kegiatan </h6>
+                                            <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>   
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Pagu DAK</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rp.">
+                                            <h6 class="font-italic">isikan besaran pagu DAK sesuai dengan jenis DAK </h6>
+                                            <h6 class="font-italic">Contoh :Rp. 6.000.000</h6>
                                         </div>
                                         <div class="btn-toolbar text-center well">
                                             <div class="mx-auto m-3" style="width: 300px;" >
