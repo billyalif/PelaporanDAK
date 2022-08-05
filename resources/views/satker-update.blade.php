@@ -62,8 +62,20 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group" style="font-weight:700">
-                                                        <label for="name">Nama Satuan Kerja</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
+                                                        <label for="nama_satker">Nama Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="nama_satker" name="nama_satker" value={{$data['nama_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="alamat_satker">Alamat Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="alamat_satker" name="alamat_satker" value={{$data['alamat_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="notelp_satker">No. Telp Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="notelp_satker" name="notelp_satker" value={{$data['notelp_satker']}}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="pj_satker">Penanggung Jawab Satuan Kerja</label>
+                                                        <input type="text" class="form-control" id="pj_satker" name="pj_satker" value={{$data['pj_satker']}}>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>

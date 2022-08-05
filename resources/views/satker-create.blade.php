@@ -64,10 +64,14 @@
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="nama_satker">Nama Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="nama_satker" name="nama_satker">
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama Satker yang ada di Kabupaten/Kota/Provinsi</h6>
+                                                        <h6 class="font-italic">Contoh : Dinas Pendidikan</h6>
                                                     </div>
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="alamat_satker">Alamat Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="alamat_satker" name="alamat_satker">
+                                                        <h6 class="font-italic mt-2">Isikan alamat sesuai dengan Satker terkait</h6>
+                                                        <h6 class="font-italic">Contoh : Jl. Lurus 6/45 Jakarta</h6>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                     <label for="gender">No. Telp Satuan Kerja</label>
@@ -79,10 +83,14 @@
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="notelp_satker">No. Telp Satuan Kerja</label>
                                                         <input type="number" class="form-control" id="notelp_satker" name="notelp_satker">
+                                                        <h6 class="font-italic mt-2">Isikan nomor telepon sesuai dengan Satker terkait</h6>
+                                                        <h6 class="font-italic">Contoh : 0987655345634</h6>
                                                     </div>
                                                     <div class="form-group" style="font-weight:700">
-                                                        <label for="pj_satker">PJ Satuan Kerja</label>
+                                                        <label for="pj_satker">Penanggung Jawab Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="pj_satker" name="pj_satker">
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama penanggung jawab satker. Jika tidak ada, isikan nama Kepala Satker</h6>
+                                                        <h6 class="font-italic">Contoh : Supriyatno, M. Sc</h6>
                                                     </div>
 
                                                     {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
