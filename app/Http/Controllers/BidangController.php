@@ -17,11 +17,9 @@ class BidangController extends Controller
     }
 
     public function insert(){
-        $user   = TabelUser::all();
         $satker = Satker::all();
         return view('bidang-create',[
             'title' => 'Tambah Bidang',
-            'user' => $user,
             'satker' => $satker
         ]);
     }
