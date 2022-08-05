@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,17 +61,17 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group font-weight-bold">
-                                                        <label for="nama_bidang">1. Nama Bidang</label>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="nama_bidang">Nama Bidang</label>
                                                         <input type="text" class="form-control" id="nama_bidang" name="nama_bidang">
-                                                        <h6 class="font-italic">Isikan sesuai nama bidang yang ada di dalam Satker</h6>
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama bidang yang ada di dalam Satker</h6>
                                                         <h6 class="font-italic">Contoh : Pertanian Umum</h6>
                                                     </div>
 
-                                                    <div class="form-group font-weight-bold">
-                                                        <label for="pj_bidang">2. Penanggung Jawab Bidang</label>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="pj_bidang">Penanggung Jawab Bidang</label>
                                                         <input type="text" class="form-control" id="pj_bidang" name="pj_bidang">
-                                                        <h6 class="font-italic">Isikan sesuai nama penanggung jawab bidang. Jika tidak ada, isikan nama Kepala Bidang</h6>
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama penanggung jawab bidang. Jika tidak ada, isikan nama Kepala Bidang</h6>
                                                         <h6 class="font-italic">Contoh : Supriyatno, M. Sc</h6>
                                                     </div>
                                                     {{-- <div class="form-group">

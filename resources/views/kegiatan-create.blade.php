@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,13 +61,17 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="nama_kegiatan">Nama Kegiatan</label>
                                                         <input type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan">
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama kegiatan yang dilakukan</h6>
+                                                        <h6 class="font-italic">Contoh : Pengelolaan Dana BOS Sekolah Pendidikan Khusus</h6>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="deskripsi_kegiatan">Deskripsi Kegiatan</label>
                                                         <input type="text" class="form-control" id="deskripsi_kegiatan" name="deskripsi_kegiatan">
+                                                        <h6 class="font-italic mt-2">Isikan deskripsi sesuai kegiatan yang dilakukan</h6>
+                                                        <h6 class="font-italic">Contoh : Kegiatan ini merupakan kegiatan tahunan yang ...</h6>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                     <label for="gender">Gender</label>

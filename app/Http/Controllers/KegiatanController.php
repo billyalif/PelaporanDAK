@@ -15,15 +15,15 @@ class KegiatanController extends Controller
         $tabel_kegiatan = Kegiatan::all();
         $tabel_kegiatan_anggaran = Anggaran::all();
         return view('kegiatan-data',
-            ['tabel_kegiatan'=>$tabel_kegiatan],
-            ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_anggaran]);
-            ['title' => 'Data Kegiatan'];
+            ['tabel_kegiatan'=>$tabel_kegiatan,
+            'tabel_kegiatan_anggaran'=>$tabel_kegiatan_anggaran,
+            'title' => 'Data Kegiatan']);
     }
 
 
     public function insert(){
-        return view('kegiatan-create');
-        ['title' => 'Tambah Kegiatan'];
+        return view('kegiatan-create',
+        ['title' => 'Tambah Kegiatan']);
     }
 
     public function store(Request $request){
@@ -48,7 +48,7 @@ class KegiatanController extends Controller
     }
 
     public function update(){
-        
+
     }
 
     public function destroy(){

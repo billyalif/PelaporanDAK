@@ -10,18 +10,17 @@ class BidangController extends Controller
 {
     public function index(){
         $tabel_bidang = Bidang::all();
-        $tabel_kegiatan_satker = Satker::all();
+        $tabel_satker = Satker::all();
         return view('bidang-data',
-            ['tabel_bidang'=>$tabel_bidang],
-            ['tabel_kegiatan_anggaran'=>$tabel_kegiatan_satker]);
+            ['tabel_bidang'=>$tabel_bidang,
+            'tabel_satker'=>$tabel_satker,
+            'title' => 'Data Bidang']);
     }
 
     public function insert(){
-        $user   = TabelUser::all();
         $satker = Satker::all();
         return view('bidang-create',[
             'title' => 'Tambah Bidang',
-            'user' => $user,
             'satker' => $satker
         ]);
     }
@@ -30,7 +29,7 @@ class BidangController extends Controller
         $validatedData = $request->validate([
             'id_satker'     => 'required',
             'nama_bidang'   => 'required',
-            'created_at'    => date("Y-m-d H:i:s"),
+            'created_at'    => date("Y-m-d H:i:s")
         ]);
 
         Bidang::create($validatedData);

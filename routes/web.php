@@ -28,7 +28,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-//Landing Page 
+//Landing Page
 Route::get('/', function () {
     return view('home');
 });
@@ -64,7 +64,7 @@ Route::post('/ubah-bidang/{id}',[BidangController::class, 'update']);
 Route::get('/satker',[SatkerController::class,"index"]);
 Route::get('/form-satker',[SatkerController::class,"insert"]);
 Route::post('/tambah-satker',[SatkerController::class,"store"]);
-Route::get('/hapus-satker/{id}',[SatkerController::class, 'delete']);
+Route::get('/hapus-satker/{id}',[SatkerController::class, 'destroy']);
 Route::get('/ubah-satker/{id}',[SatkerController::class, 'edit']);
 Route::post('/ubah-satker/{id}',[SatkerController::class, 'update']);
 
@@ -72,7 +72,7 @@ Route::post('/ubah-satker/{id}',[SatkerController::class, 'update']);
 Route::get('/subbid',[SubBidangController::class,"index"]);
 Route::get('/form-subbid',[SubBidangController::class,"insert"]);
 Route::post('/tambah-subbid',[SubBidangController::class,"store"]);
-Route::get('/hapus-subbid/{id}',[SubBidangController::class, 'delete']);
+Route::get('/hapus-subbid/{id}',[SubBidangController::class, 'destroy']);
 Route::get('/ubah-subbid/{id}',[SubBidangController::class, 'edit']);
 Route::post('/ubah-subbid/{id}',[SubBidangController::class, 'update']);
 
@@ -80,9 +80,18 @@ Route::post('/ubah-subbid/{id}',[SubBidangController::class, 'update']);
 Route::get('/kegiatan',[KegiatanController::class,"index"]);
 Route::get('/form-kegiatan',[KegiatanController::class,"insert"]);
 Route::post('/tambah-kegiatan',[KegiatanController::class,"store"]);
-Route::get('/hapus-kegiatan/{id}',[KegiatanController::class, 'delete']);
+Route::get('/hapus-kegiatan/{id}',[KegiatanController::class, 'destroy']);
 Route::get('/ubah-kegiatan/{id}',[KegiatanController::class, 'edit']);
 Route::post('/ubah-kegiatan/{id}',[KegiatanController::class, 'update']);
+
+
+//Anggaran
+Route::get('/anggaran',[AnggaranController::class,"index"]);
+Route::get('/form-anggaran',[AnggaranController::class,"insert"]);
+Route::post('/tambah-anggaran',[AnggaranController::class,"store"]);
+Route::get('/hapus-anggaran/{id}',[AnggaranController::class, 'destroy']);
+Route::get('/ubah-anggaran/{id}',[AnggaranController::class, 'edit']);
+Route::post('/ubah-anggaran/{id}',[AnggaranController::class, 'update']);
 
 Route::get('/form-laporan', function () {
     return view('formlaporan');

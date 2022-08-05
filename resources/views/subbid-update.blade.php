@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,13 +57,17 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      {{-- <form method="POST" action="/update-subbid/{{$data->id_bidang}}"> --}}
+                                      <form method="POST" action="/update-subbid/{{$subbidang->id}}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama Sub Bidang</label>
-                                                        {{-- <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_bidang']}}> --}}
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="nama_subbidang">Nama Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="nama_subbidang" name="nama_subbidang" value={{ $subbidang['nama_subbidang'] }}>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="deskripsi_subbidang">Deskripsi Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="deskripsi_subbidang" name="deskripsi_subbidang" value={{ $subbidang['deskripsi_subbidang'] }}>
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
@@ -85,7 +89,8 @@
                                                         <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
                                                     </div> --}}
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/subbid" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,8 +45,8 @@
                         <h1 class="h3 mb-0 text-gray-800">Data Sub Bidang</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Sub Bidang</button>
-                
+                    <a href="/form-subbid" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
+                    <a href="/kegiatan" type="button" class="btn btn-primary1">Masuk ke Kegiatan</a>
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 
@@ -63,20 +63,23 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Sub Bidang</th>
+                                            <th scope="col">Deskripsi Sub Bidang</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            {{-- @foreach ($data as $bidang) --}}
+                                            @php $no = 1; @endphp
+                                            @foreach ($tabel_subbidang as $subbidang)
                                           <tr>
-                                            <th scope="row">1</th>
-                                            {{-- <td>{{ $bidang->$nama_bidang }}</td> --}}
+                                            <th>{{ $subbidang->$no++ }}</th>
+                                            <td>{{ $subbidang->$nama_subbidang }}</td>
+                                            <td>{{ $subbidang->$deskripsi_subbidang }}</td>
                                             <td>
-                                                <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/hapus-subbid/{id}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-subbid/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
-                                          {{-- @endforeach --}}
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK</title>
+    <title>E-SIDAK | {{ $title }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,8 +45,9 @@
                         <h1 class="h3 mb-0 text-gray-800">Data Kegiatan</h1>
                     </div>
 
-                    <button type="button" class="btn btn-primary1">Tambah Kegiatan</button>
-                
+                    <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
+                    <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
+
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 

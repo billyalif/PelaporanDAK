@@ -12,7 +12,7 @@ use App\Models\Kegiatan;
 class AnggaranController extends Controller
 {
     public function index(){
-
+        
     }
 
     public function insert(){
