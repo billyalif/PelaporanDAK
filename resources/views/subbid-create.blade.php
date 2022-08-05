@@ -64,8 +64,16 @@
                                                     <div class="form-group">
                                                         <label for="name">Nama Sub Bidang</label>
                                                         <input type="text" class="form-control" id="name" name="nama_guru">
+                                                        <h6 class="font-italic mt-2">Isikan nama sub bidang yang sesuai dengan bidang terkait</h6>
+                                                        <h6 class="font-italic">Contoh : Pertanian Umum</h6>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label for="deskripsi_kegiatan">Deskripsi Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="deskripsi_kegiatan" name="deskripsi_kegiatan">
+                                                        <h6 class="font-italic mt-2">Isikan deskripsi sub bidang sesuai bidang yang terkait</h6>
+                                                        <h6 class="font-italic">Contoh : </h6>
+                                                    </div>
+                                                    {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
                                                         <input type="text" class="form-control" id="hp" name="hp">
                                                     </div>
@@ -83,9 +91,10 @@
                                                     <div class="form-group">
                                                         <label for="nama_ortu">Status Aktif</label>
                                                         <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
-                                                    </div>
+                                                    </div> --}}
 
-                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
+                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
+                                                    <a href="/subbid" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">
