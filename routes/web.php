@@ -5,6 +5,7 @@ use App\Http\Controllers\BatchController;
 use App\Http\Controllers\BidangController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DakController;
+use App\Http\Controllers\Dashboard\LoginController as DashboardLoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\FormLaporanController;
@@ -34,15 +35,15 @@ Route::get('/', function () {
 });
 
 //Authentication
-Route::get('/login', function () {
-    return view('login');
-});
-Route::post('/login/authenticate', [LoginController::class, "authenticate"]);
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login-authenticate', [LoginController::class, "authenticate"]);
 Route::get('/logout', [LoginController::class, 'logout']);
 
 //Admin Dahboard
 Route::get('/admin', function () {
-    return view('admin');
+    return view('Dashboard.admin',[
+        'title' => 'Dashboard'
+    ]);
 });
 // Route::middleware('auth:admin')->group(function () {
 //     Route::get('/admin',[DashboardController::class,"index"])->name('dashboard');
@@ -108,3 +109,6 @@ Route::get('/super-admin', function () {
 Route::get('/create-kegiatan', function () {
     return view('create-kegiatan');
 });
+
+//EXPORT EXCEL
+Route::get('/satker-export_excel', [SatkerController::class, 'export_excel']);

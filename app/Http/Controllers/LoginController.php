@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,27 +14,36 @@ class LoginController extends Controller
         ]);
     }
 
-    // public function authenticate(Request $request)
-    // {
+    public function authenticate(Request $request)
+    {
       
-    //     $credentials = [
-    //         'email' => $request->email,
-    //         'password' => $request->password,
-    //     ];
+        $credentials = [
+            'username_user' => $request->username,
+            'password' => $request->password,
+        ];
+        
+        // dd($credentials);
 
-    //     if(Auth::guard('admin')->attempt($credentials)){
-    //         $request->session()->regenerate();
-    //         return redirect()->intended(route('dashboard'));
-    //     }else if(Auth::guard('user')->attempt($credentials)){
-    //         $request->session()->regenerate();
-    //         return redirect()->intended(route('MainUser'));
-    //     }
-    //     else if(Auth::guard('guru')->attempt($credentials)){
-    //         $request->session()->regenerate();
-    //         return redirect()->intended(route('DashGuru'));
-    //     }
-    //     return back()->with(['loginError' => 'Email atau Password salah']);
-    // }
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+
+            return redirect()->intended('/satker');
+        };
+
+
+        // if(Auth::guard('admin')->attempt($credentials)){
+        //     $request->session()->regenerate();
+        //     return redirect()->intended(route('dashboard'));
+        // }else if(Auth::guard('user')->attempt($credentials)){
+        //     $request->session()->regenerate();
+        //     return redirect()->intended(route('MainUser'));
+        // }
+        // else if(Auth::guard('guru')->attempt($credentials)){
+        //     $request->session()->regenerate();
+        //     return redirect()->intended(route('DashGuru'));
+        // }
+        return back()->with(['loginError' => 'Email atau Password salah']);
+    }
 
     // public function logout(Request $request){
     //     if(Auth::guard('admin')->check()){

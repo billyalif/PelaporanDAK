@@ -42,15 +42,15 @@
                   {{-- <div class="col-12 col-md-8 col-lg-6 col-xl-5"> --}}
                     <div class="card shadow-2-strong" style="border-radius: 0.5rem;">
                       <div class="card-body p-5 text-center">
-            
-                        <form>
+                        <form action="/login-authenticate" method="POST">
+                          @csrf
                           <div class="form-group" style="text-align: left;">
                             <label for="exampleDropdownFormEmail2" style="color: rgb(27, 22, 22);font-weight: 500;">Username</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                            <input name="username" type="text" class="form-control" id="exampleDropdownFormEmail2" placeholder="Username" required>
                           </div>
                           <div class="form-group" style="text-align: left;">
                             <label for="exampleDropdownFormPassword2" style="color: rgb(27, 22, 22);font-weight: 500;">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                            <input name="password" type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" required>
                           </div>
                           <div class="form-check" style="text-align: left">
                             <input type="checkbox" class="form-check-input" id="dropdownCheck2">

@@ -23,7 +23,7 @@ class CreateTabelSatker extends Migration
         });
 
         Schema::table('tabel_satker', function (Blueprint $table) {
-            $table->foreignId('id_user')->constrained('tabel_user');
+            $table->foreignId('id_user')->constrained('users');
         });
     }
 
