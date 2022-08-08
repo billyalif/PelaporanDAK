@@ -11,13 +11,16 @@ use Illuminate\Http\Request;
 
 class KegiatanController extends Controller
 {
-    public function index(){
-        $tabel_kegiatan = Kegiatan::all();
+    public function index($id){
+        $tabel_kegiatan = Kegiatan::where('id_subbid', $id);
         $tabel_kegiatan_anggaran = Anggaran::all();
         return view('kegiatan-data',
             ['tabel_kegiatan'=>$tabel_kegiatan,
             'tabel_kegiatan_anggaran'=>$tabel_kegiatan_anggaran,
-            'title' => 'Data Kegiatan']);
+            'subbid'=> $id,
+            'title' => 'Data Kegiatan',
+            'no'    => 1
+        ]);
     }
 
 

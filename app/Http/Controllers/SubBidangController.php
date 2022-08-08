@@ -8,13 +8,14 @@ use Illuminate\Http\Request;
 
 class SubBidangController extends Controller
 {
-    public function index(){
-        $tabel_subbidang = Subbidang::all();
-        $tabel_bidang = Bidang::all();
+    public function index($id){
+        $tabel_subbidang = Subbidang::where('id_bidang', $id)->get();
         return view('subbid-data',
             ['tabel_subbidang'=>$tabel_subbidang,
-            'tabel_bidang'=>$tabel_bidang,
-            'title' => 'Data Sub-Bidang']);
+            'bidang'=> $id,
+            'title' => 'Data Sub-Bidang',
+            'no'    => 1
+        ]);
     }
 
     public function insert(){

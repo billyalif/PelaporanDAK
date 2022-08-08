@@ -42,9 +42,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Kegiatan</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Kegiatan</h1>
                     </div>
 
+                    <a href="/subbid-{{ $subbid }}" type="button" class="btn btn-warning text-dark">Kembali</a>
                     <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
                     <a href="/form-laporan" type="button" class="btn btn-primary1">Form Laporan (akses dari home)</a>
                     <a href="/anggaran-kegiatan" type="button" class="btn btn-primary1">Form Laporan (akses dari kegiatan)</a>
@@ -73,9 +74,9 @@
                                             @php $no = 1; @endphp
                                             @foreach ($tabel_kegiatan as $kegiatan)
                                           <tr>
-                                            <th>{{ $kegiatan->$no++ }}</th>
-                                            <td>{{ $kegiatan->$nama_kegiatan }}</td>
-                                            <td>{{ $kegiatan->$deskripsi_kegiatan }}</td>
+                                            <th>{{ $no++ }}</th>
+                                            <td>{{ $kegiatan->nama_kegiatan }}</td>
+                                            <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
                                             <td>
                                                 <a href="" class="btn btn-sm btn-primary">Tambah Anggaran</a>
                                                 <a href="" class="btn btn-sm btn-secondary">Lihat Detail</a>

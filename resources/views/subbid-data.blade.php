@@ -42,11 +42,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Sub Bidang</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Sub Bidang</h1>
                     </div>
 
+                    <a href="/bidang-{{ $bidang }}" type="button" class="btn btn-warning text-dark">Kembali</a>
                     <a href="/form-subbid" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
-                    <a href="/kegiatan" type="button" class="btn btn-primary1">Masuk ke Kegiatan</a>
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 
@@ -64,16 +64,17 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Sub Bidang</th>
                                             <th scope="col">Deskripsi Sub Bidang</th>
+                                            <th scope="col">Lihat Kegiatan</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @php $no = 1; @endphp
                                             @foreach ($tabel_subbidang as $subbidang)
                                           <tr>
-                                            <th>{{ $subbidang->$no++ }}</th>
-                                            <td>{{ $subbidang->$nama_subbidang }}</td>
-                                            <td>{{ $subbidang->$deskripsi_subbidang }}</td>
+                                            <th>{{ $no++ }}</th>
+                                            <td>{{ $subbidang->nama_subbidang }}</td>
+                                            <td>{{ $subbidang->deskripsi_subbidang }}</td>
+                                            <td><a href="/kegiatan-{{ $subbidang->id }}" class="btn btn-sm btn-primary">Lihat Kegiatan</a></td>
                                             <td>
                                                 <a href="/hapus-subbid/{id}" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="/ubah-subbid/{id}" class="btn btn-sm btn-warning">Ubah</a>

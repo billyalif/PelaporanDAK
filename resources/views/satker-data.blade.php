@@ -42,12 +42,12 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Satuan Kerja</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Satuan Kerja</h1>
                     </div>
 
                     {{-- <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button> --}}
                     <a href="/form-satker" type="button" class="btn btn-primary1">Tambah Satuan Kerja</a>
-                    <a href="/bidang" type="button" class="btn btn-primary1">Masuk ke Bidang</a>
+                    {{-- <a href="/bidang" type="button" class="btn btn-primary1">Masuk ke Bidang</a> --}}
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -68,18 +68,19 @@
                                             <th scope="col">Alamat</th>
                                             <th scope="col">No. Telp</th>
                                             <th scope="col">Penanggung Jawab</th>
+                                            <th scope="col">Bidang</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @php $no = 1; @endphp
                                             @foreach ($tabel_satker as $satker)
                                           <tr>
-                                            <th>{{ $satker->$no++ }}</th>
-                                            <td>{{ $satker->$nama_satker }}</td>
-                                            <td>{{ $satker->$alamat_satker }}</td>
-                                            <td>{{ $satker->$notelp_satker }}</td>
-                                            <td>{{ $satker->$pj_satker }}</td>
+                                            <th>{{ $no++ }}</th>
+                                            <td>{{ $satker->nama_satker }}</td>
+                                            <td>{{ $satker->alamat_satker }}</td>
+                                            <td>{{ $satker->notelp_satker }}</td>
+                                            <td>{{ $satker->pj_satker }}</td>
+                                            <td><a href="/bidang-{{ $satker->id }}" class="btn btn-sm btn-primary">Lihat Bidang</a></td>
                                             <td>
                                                 <a href="/hapus-satker/{id}" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="/ubah-satker/{id}" class="btn btn-sm btn-warning">Ubah</a>

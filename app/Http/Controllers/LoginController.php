@@ -45,23 +45,10 @@ class LoginController extends Controller
         return back()->with(['loginError' => 'Email atau Password salah']);
     }
 
-    // public function logout(Request $request){
-    //     if(Auth::guard('admin')->check()){
-    //         Auth::logout();
-    //         $request->session()->invalidate();
-    //         $request->session()->regenerateToken();
-    //         return redirect('/');
-    //     }else if(Auth::guard('user')->check()){
-    //         Auth::logout();
-    //         $request->session()->invalidate();
-    //         $request->session()->regenerateToken();
-    //         return redirect('/');
-    //     }
-    //     else if(Auth::guard('guru')->check()){
-    //         Auth::logout();
-    //         $request->session()->invalidate();
-    //         $request->session()->regenerateToken();
-    //         return redirect('/');
-    //     }
-    // }
+    public function logout(Request $request){
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect('/');
+    }
 }

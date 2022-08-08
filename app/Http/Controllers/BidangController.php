@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 
 class BidangController extends Controller
 {
-    public function index(){
-        $tabel_bidang = Bidang::all();
-        $tabel_satker = Satker::all();
+    public function index($id){
+        $tabel_bidang = Bidang::where('id_satker', $id)->get();
         return view('bidang-data',
             ['tabel_bidang'=>$tabel_bidang,
-            'tabel_satker'=>$tabel_satker,
-            'title' => 'Data Bidang']);
+            'title' => 'Data Bidang',
+            'no'    => 1
+        ]);
     }
 
     public function insert(){
