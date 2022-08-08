@@ -71,7 +71,7 @@ Route::post('/ubah-satker/{id}',[SatkerController::class, 'update']);
 
 //Subbid
 Route::get('/subbid-{id}',[SubBidangController::class,"index"]);
-Route::get('/form-subbid/{id}',[SubBidangController::class,"insert"]);
+Route::get('/form-subbid-{id}',[SubBidangController::class,"insert"]);
 Route::post('/tambah-subbid',[SubBidangController::class,"store"]);
 Route::get('/hapus-subbid/{id}',[SubBidangController::class, 'destroy']);
 Route::get('/ubah-subbid/{id}',[SubBidangController::class, 'edit']);

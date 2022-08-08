@@ -9,17 +9,19 @@ use Illuminate\Http\Request;
 class SubBidangController extends Controller
 {
     public function index($id){
+        $bidang = Bidang::find($id);
         $tabel_subbidang = Subbidang::where('id_bidang', $id)->get();
         return view('subbid-data',
             ['tabel_subbidang'=>$tabel_subbidang,
             'bidang'=> $id,
             'title' => 'Data Sub-Bidang',
-            'no'    => 1
+            'no'    => 1,
+            'bidang'=> $bidang
         ]);
     }
 
-    public function insert(){
-        $bidang = Bidang::all();
+    public function insert($id){
+        $bidang = Bidang::find($id);
         return view('subbid-create',[
             'title' => 'Tambah Bidang',
             'bidang' => $bidang
@@ -34,8 +36,9 @@ class SubBidangController extends Controller
         ]);
 
         Subbidang::create($validatedData);
+
+        return redirect()->back();
         $request->session()->flash('success','SubBidang berhasil ditambahkan!');
-        return redirect('/subbidang-data');
     }
 
     public function edit(){

@@ -12,13 +12,13 @@ class Subbidang extends Model
     protected $table = 'tabel_subbidang';
     protected $primarykey = 'id';
     protected $fillable = [
-        'nama_subbidang',
-        'deskripsi_subbidang'
+        'id_bidang',
+        'nama_subbidang'
     ];
 
     //relationship
     public function Bidang(){
-        return $this->belongsTo(Bidang::class, 'FK_id_bidang', 'id');
+        return $this->belongsTo(Bidang::class, 'id_bidang', 'id');
     }
 }
 ?>

@@ -46,7 +46,7 @@
                     </div>
 
                     <a href="/bidang-{{ $bidang }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-subbid" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
+                    <a href="/form-subbid-{{ $bidang->id }}" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 
