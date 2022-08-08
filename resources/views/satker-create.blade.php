@@ -62,6 +62,12 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group" style="font-weight:700">
+                                                        <label for="KK">Kabupaten/Kota</label>
+                                                        <select class="form-control" id="id_user" name="id_user" readonly placeholder="tes" >
+                                                            <option value="{{ auth()->user()->id }}" selected>{{ auth()->user()->nama_user }}</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group" style="font-weight:700">
                                                         <label for="nama_satker">Nama Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="nama_satker" name="nama_satker">
                                                         <h6 class="font-italic mt-2">Isikan sesuai nama Satker yang ada di Kabupaten/Kota/Provinsi</h6>
@@ -73,13 +79,6 @@
                                                         <h6 class="font-italic mt-2">Isikan alamat sesuai dengan Satker terkait</h6>
                                                         <h6 class="font-italic">Contoh : Jl. Lurus 6/45 Jakarta</h6>
                                                     </div>
-                                                    {{-- <div class="form-group">
-                                                    <label for="gender">No. Telp Satuan Kerja</label>
-                                                        <select class="form-control" id="gender" name="gender">
-                                                        <option>L</option>
-                                                        <option>P</option>
-                                                        </select>
-                                                    </div> --}}
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="notelp_satker">No. Telp Satuan Kerja</label>
                                                         <input type="number" class="form-control" id="notelp_satker" name="notelp_satker">
@@ -94,7 +93,7 @@
                                                     </div>
 
                                                     {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
-                                                    <a href="/satker" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
+                                                    <input type="submit" class="btn btn-primary" value="Submit">
 
                                                 </div>
                                                 {{-- <div class="row">

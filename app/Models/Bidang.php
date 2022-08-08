@@ -11,20 +11,21 @@ class Bidang extends Model
 
     protected $table = 'tabel_bidang';
     protected $primaryKey = 'id';
-    protected $fillables = [
+    protected $fillable = [
+        'id_satker',
         'nama_bidang',
-        'total_anggaran_bidang'
+        'pj_bidang'
     ];
 
     //relationship
     public function Satker(){
-        //just having one batch
-        return $this->belongsTo(Satker::class, 'FK_id_satker', 'id');
+        //just having one satker
+        return $this->belongsTo(Satker::class, 'id_satker', 'id');
     }
 
     public function Subbidang(){
-        //just having one dak
-        return $this->hasMany(Subbidang::class,'FK_id_sub', 'id');
+        // having many subbid
+        return $this->hasMany(Subbidang::class,'id_sub', 'id');
     }
 
 

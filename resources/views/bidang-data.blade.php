@@ -47,7 +47,7 @@
 
                     {{-- <button type="button" class="btn btn-primary1" href="/form-bidang">Tambah Bidang</button> --}}
                     <a href="/satker" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-bidang" type="button" class="btn btn-primary1">Tambah Bidang</a>
+                    <a href="/form-bidang-{{ $satker->id }}" type="button" class="btn btn-primary1">Tambah Bidang</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -75,8 +75,8 @@
                                           <tr>
                                             <th>{{ $no++ }}</th>
                                             <td>{{ $bidang->nama_bidang }}</td>
-                                            <td>{{ $bidang->pj_bidang }}</td> 
-                                            <td><a href="/subbid-{{ $bidang->id }}" class="btn btn-sm btn-primary">Lihat Subbidang</a></td> 
+                                            <td>{{ $bidang->pj_bidang }}</td>
+                                            <td><a href="/subbid-{{ $bidang->id }}" class="btn btn-sm btn-primary">Lihat Subbidang</a></td>
                                             <td>
                                                 <a href="/hapus-bidang/{id}" class="btn btn-sm btn-danger">Hapus</a>
                                                 <a href="/ubah-bidang/{id}" class="btn btn-sm btn-warning">Ubah</a>

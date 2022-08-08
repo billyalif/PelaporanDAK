@@ -101,17 +101,12 @@
                                             <label for="inputState">Jumlah Penerima Manfaat</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
                                             <h6 class="font-italic">Isikan jumlah penerima manfaat</h6>
-                                            <h6 class="font-italic">Contoh : 14320</h6>
+                                            <h6 class="font-italic">Contoh : 30</h6>
                                         </div>
                                         <div class="form-group" style="font-weight:700">
                                             <label for="exampleFormControlSelect1">Jenis DAK</label>
                                             <select class="form-control" id="exampleFormControlSelect1">
-
-                                                {{-- @foreach($dak as $v)
-                                                    <option value="" disabled selected hidden> DAK </option>
-                                                    <option value="{{ $v->id }}">{{ $v->nama_dak }}</option>
-                                                @endforeach--}}
-
+                                                <option>1</option>
                                             </select>
                                             <h6 class="font-italic">Isikan jenis DAK sesuai dengan kegiatan </h6>
                                             <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>

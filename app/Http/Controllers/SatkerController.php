@@ -10,12 +10,13 @@ use Illuminate\Http\Request;
 class SatkerController extends Controller
 {
     public function index(){
-        $tabel_satker = Satker::where('id_user', auth()->user()->id)->get(); 
+        $id =  auth()->user()->id;
+        $tabel_satker = Satker::where('id_user',$id)->get();
+        $tabel_user= TabelUser::all();
         return view('satker-data',
             ['tabel_satker'=>$tabel_satker,
-            'title' => 'Data Satker',
-            'no'    => 1
-        ]);
+            'tabel_user'=>$tabel_user,
+            'title' => 'Data Satker']);
     }
 
 
@@ -28,18 +29,18 @@ class SatkerController extends Controller
 
     public function store(Request $request){
         $validatedData = $request->validate([
-            'id_user' => 'required|max:20',
-            'nama_satker'  => 'required|max:100',
-            'alamat_satker'  => 'required|max:150',
-            'notelp_satker'  => 'required|max:13',
-            'pj_satker'  => 'required|max:100',
+            'id_user' => 'required',
+            'nama_satker'  => 'required',
+            'alamat_satker'  => 'required',
+            'notelp_satker'  => 'required',
+            'pj_satker'  => 'required',
             'created_at' => date("Y-m-d H:i:s")
         ]);
 
         Satker::create($validatedData);
 
         $request->session()->flash('success', 'Kegiatan berhasil ditambahkan');
-        return redirect('/satker-data');
+        return redirect('/satker');
     }
 
     public function edit(){

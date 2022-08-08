@@ -9,16 +9,18 @@ use Illuminate\Http\Request;
 class BidangController extends Controller
 {
     public function index($id){
-        $tabel_bidang = Bidang::where('id_satker', $id)->get();
-        return view('bidang-data',
-            ['tabel_bidang'=>$tabel_bidang,
+        $satker = Satker::find($id);
+        $tabel_bidang = Bidang::where('id_satker',$id)->get();
+        return view('bidang-data',[
+            'tabel_bidang' => $tabel_bidang,
             'title' => 'Data Bidang',
-            'no'    => 1
+            'no'    => 1,
+            'satker'=>$satker
         ]);
     }
 
-    public function insert(){
-        $satker = Satker::all();
+    public function insert($id){
+        $satker = Satker::find($id);
         return view('bidang-create',[
             'title' => 'Tambah Bidang',
             'satker' => $satker
@@ -29,12 +31,13 @@ class BidangController extends Controller
         $validatedData = $request->validate([
             'id_satker'     => 'required',
             'nama_bidang'   => 'required',
+            'pj_bidang'     => 'required',
             'created_at'    => date("Y-m-d H:i:s")
         ]);
 
         Bidang::create($validatedData);
         $request->session()->flash('success','Bidang berhasil ditambahkan!');
-        return redirect('/bidang-data');
+        return redirect()->back();
     }
 
     public function edit(){

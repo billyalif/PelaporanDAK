@@ -73,6 +73,9 @@
                                           </tr>
                                         </thead>
                                         <tbody>
+                                            @php
+                                                $no = 1;
+                                            @endphp
                                             @foreach ($tabel_satker as $satker)
                                           <tr>
                                             <th>{{ $no++ }}</th>

@@ -54,24 +54,24 @@ Route::get('/data-laporan', function () {
 });
 
 //Bidang
-Route::get('/bidang-{id}',[BidangController::class,"index"]);
-Route::get('/form-bidang',[BidangController::class,"insert"]);
-Route::post('/tambah-bidang',[BidangController::class,"store"]);
+Route::get('/bidang-{id}',[BidangController::class,'index']);
+Route::get('/form-bidang-{id}',[BidangController::class,'insert']);
+Route::post('/tambah-bidang',[BidangController::class,'store']);
 Route::get('/hapus-bidang/{id}',[BidangController::class, 'destroy']);
 Route::get('/ubah-bidang/{id}',[BidangController::class, 'edit']);
 Route::post('/ubah-bidang/{id}',[BidangController::class, 'update']);
 
 //Satker
-Route::get('/satker',[SatkerController::class,"index"]);
-Route::get('/form-satker',[SatkerController::class,"insert"]);
-Route::post('/tambah-satker',[SatkerController::class,"store"]);
+Route::get('/satker',[SatkerController::class,'index']);
+Route::get('/form-satker',[SatkerController::class,'insert']);
+Route::post('/tambah-satker',[SatkerController::class,'store']);
 Route::get('/hapus-satker/{id}',[SatkerController::class, 'destroy']);
 Route::get('/ubah-satker/{id}',[SatkerController::class, 'edit']);
 Route::post('/ubah-satker/{id}',[SatkerController::class, 'update']);
 
 //Subbid
 Route::get('/subbid-{id}',[SubBidangController::class,"index"]);
-Route::get('/form-subbid',[SubBidangController::class,"insert"]);
+Route::get('/form-subbid/{id}',[SubBidangController::class,"insert"]);
 Route::post('/tambah-subbid',[SubBidangController::class,"store"]);
 Route::get('/hapus-subbid/{id}',[SubBidangController::class, 'destroy']);
 Route::get('/ubah-subbid/{id}',[SubBidangController::class, 'edit']);
@@ -79,7 +79,7 @@ Route::post('/ubah-subbid/{id}',[SubBidangController::class, 'update']);
 
 //Kegiatan
 Route::get('/kegiatan-{id}',[KegiatanController::class,"index"]);
-Route::get('/form-kegiatan',[KegiatanController::class,"insert"]);
+Route::get('/form-kegiatan/{id}',[KegiatanController::class,"insert"]);
 Route::post('/tambah-kegiatan',[KegiatanController::class,"store"]);
 Route::get('/hapus-kegiatan/{id}',[KegiatanController::class, 'destroy']);
 Route::get('/ubah-kegiatan/{id}',[KegiatanController::class, 'edit']);
@@ -88,8 +88,8 @@ Route::post('/ubah-kegiatan/{id}',[KegiatanController::class, 'update']);
 
 //Anggaran
 Route::get('/anggaran',[AnggaranController::class,"index"]);
-Route::get('/anggaran-kegiatan',[AnggaranController::class,"insert"]);
-Route::post('/tambah-anggaran',[AnggaranController::class,"store"]);
+Route::get('/anggaran-kegiatan/{id}',[AnggaranController::class,"insert"]);
+Route::post('/tambah-anggaran/{id}',[AnggaranController::class,"store"]);
 Route::get('/hapus-anggaran/{id}',[AnggaranController::class, 'destroy']);
 Route::get('/ubah-anggaran/{id}',[AnggaranController::class, 'edit']);
 Route::post('/ubah-anggaran/{id}',[AnggaranController::class, 'update']);

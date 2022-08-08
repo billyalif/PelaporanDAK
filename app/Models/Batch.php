@@ -11,7 +11,7 @@ class Batch extends Model
 
     protected  $table = 'tabel_batch';
     protected $primaryKey = 'id';
-    protected $fillables = [
+    protected $fillable = [
         'triwulan_batch',
         'tahun_batch'
     ];

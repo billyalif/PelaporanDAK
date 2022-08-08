@@ -56,11 +56,16 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Laporan</h6>
                                 </div> --}}
                                 <div class="card-body">
-
                                     <form method="POST" action="/tambah-bidang">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
+                                                    <div class="form-group" style="font-weight:700">
+                                                        <label for="Satker">Satuan Kerja</label>
+                                                        <select class="form-control" id="id_satker" name="id_satker" readonly placeholder="" >
+                                                            <option value="{{ $satker->id }}" selected>{{ $satker->nama_satker }}</option>
+                                                        </select>
+                                                    </div>
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="nama_bidang">Nama Bidang</label>
                                                         <input type="text" class="form-control" id="nama_bidang" name="nama_bidang">
@@ -74,35 +79,8 @@
                                                         <h6 class="font-italic mt-2">Isikan sesuai nama penanggung jawab bidang. Jika tidak ada, isikan nama Kepala Bidang</h6>
                                                         <h6 class="font-italic">Contoh : Supriyatno, M. Sc</h6>
                                                     </div>
-                                                    {{-- <div class="form-group">
-                                                        <label for="jenis_bidang">Jenis Bidang</label>
-                                                        <input type="text" class="form-control" id="jenis_bidang" name="jenis_bidang">
-                                                    </div> --}}
-                                                    {{-- <div class="form-group">
-                                                    <label for="gender">Gender</label>
-                                                        <select class="form-control" id="gender" name="gender">
-                                                        <option>L</option>
-                                                        <option>P</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="kota_lahir">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="nama_ortu">Status Aktif</label>
-                                                        <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
-                                                    </div> --}}
-
-                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
-                                                    <a href="/bidang" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
-                                                </div>
-                                                {{-- <div class="row">
-                                                  <div class="col-lg-6">
-                                                  <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
-                                                  </div>
-                                                </div> --}}
-
+                                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                                 </div>
                                             </div>
                                         </form>
                                 </div>
