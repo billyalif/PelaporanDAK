@@ -98,28 +98,28 @@
                                             <h6 class="font-italic">Contoh : Pembelian alat tulis menghabiskan anggaran sebesar Rp.5.000.000  </h6>
                                         </div>
                                         <div class="form-group" style="font-weight:700">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>Choose...</option>
-                                                <option>...</option>
-                                            </select>
+                                            <label for="inputState">Jumlah Penerima Manfaat</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                            <h6 class="font-italic">Isikan jumlah penerima manfaat</h6>
+                                            <h6 class="font-italic">Contoh : 14320</h6>
                                         </div>
                                         <div class="form-group" style="font-weight:700">
                                             <label for="exampleFormControlSelect1">Jenis DAK</label>
                                             <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+
+                                                {{-- @foreach($dak as $v)
+                                                    <option value="" disabled selected hidden> DAK </option>
+                                                    <option value="{{ $v->id }}">{{ $v->nama_dak }}</option>
+                                                @endforeach--}}
+
                                             </select>
-                                            <h6 class="font-italic">isikan jenis DAK sesuai dengan kegiatan </h6>
+                                            <h6 class="font-italic">Isikan jenis DAK sesuai dengan kegiatan </h6>
                                             <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>
                                         </div>
                                         <div class="form-group">
                                             <label for="formGroupExampleInput">Pagu DAK</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rp.">
-                                            <h6 class="font-italic">isikan besaran pagu DAK sesuai dengan jenis DAK </h6>
+                                            <h6 class="font-italic">Isikan besaran pagu DAK sesuai dengan jenis DAK </h6>
                                             <h6 class="font-italic">Contoh :Rp. 6.000.000</h6>
                                         </div>
                                         <div class="btn-toolbar text-center well">

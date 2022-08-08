@@ -14,14 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
-        $role=['admin', 'user KK', 'user Satker'];
+
+        $role=['admin', 'KK', 'Satker'];
         for($i=0;$i<3;$i++){
             DB::table('tabel_role')->insert([
                 'jenis_role' => $role[$i],
             ]);
         }
-        
+
         \App\Models\User::factory(10)->create();
     }
 }

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class SatkerController extends Controller
 {
     public function index(){
-        $tabel_satker = Satker::all();
+        $tabel_satker = Satker::all(); //where fk = auth
         $tabel_user= TabelUser::all();
         return view('satker-data',
             ['tabel_satker'=>$tabel_satker,

@@ -88,7 +88,7 @@ Route::post('/ubah-kegiatan/{id}',[KegiatanController::class, 'update']);
 
 //Anggaran
 Route::get('/anggaran',[AnggaranController::class,"index"]);
-Route::get('/form-anggaran',[AnggaranController::class,"insert"]);
+Route::get('/anggaran-kegiatan',[AnggaranController::class,"insert"]);
 Route::post('/tambah-anggaran',[AnggaranController::class,"store"]);
 Route::get('/hapus-anggaran/{id}',[AnggaranController::class, 'destroy']);
 Route::get('/ubah-anggaran/{id}',[AnggaranController::class, 'edit']);
