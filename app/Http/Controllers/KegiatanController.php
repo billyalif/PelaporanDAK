@@ -17,7 +17,7 @@ class KegiatanController extends Controller
             ['tabel_kegiatan'=>$tabel_kegiatan,
             'subbid'=> $subbidang,
             'title' => 'Data Kegiatan',
-            'no'    => 1
+            'no'    => 1,
         ]);
     }
 
