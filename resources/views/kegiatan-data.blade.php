@@ -46,9 +46,7 @@
                     </div>
 
                     <a href="/subbid-{{ $subbid }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-kegiatan" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
-                    <a href="/form-laporan" type="button" class="btn btn-primary1">Form Laporan (akses dari home)</a>
-                    <a href="/anggaran-kegiatan" type="button" class="btn btn-primary1">Form Laporan (akses dari kegiatan)</a>
+                    <a href="/form-kegiatan-{{ $subbid->id }}" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -67,6 +65,8 @@
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Kegiatan</th>
                                             <th scope="col">Deskripsi Kegiatan</th>
+                                            <th scope="col">Pagu Diterima</th>
+                                            <th scope="col">Pagu Dibelanjakan</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
@@ -77,6 +77,8 @@
                                             <th>{{ $no++ }}</th>
                                             <td>{{ $kegiatan->nama_kegiatan }}</td>
                                             <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
+                                            <td>{{ $kegiatan->pagu_diterima }}</td>
+                                            <td>{{ $kegiatan->pagu_dibelanjakan }}</td>
                                             <td>
                                                 <a href="" class="btn btn-sm btn-primary">Tambah Anggaran</a>
                                                 <a href="" class="btn btn-sm btn-secondary">Lihat Detail</a>

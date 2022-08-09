@@ -44,69 +44,130 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Tambah Kegiatan</h1>
                     </div>
-                
-                    <!-- Content Row -->
-                    <div class="row" style="padding-top: 0rem">
 
-                        <div class="col-lg-12 mb-4">
+                    <div class="row">
 
-                            <!-- Illustrations -->
+                        <div class="col-lg-12">
+
+                        <form method="POST" action="/tambah-kegiatan">
+                                @csrf
                             <div class="card shadow mb-4">
-                                {{-- <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Laporan</h6>
-                                </div> --}}
                                 <div class="card-body">
 
-                                    <form method="POST" action="/tambah-kegiatan">
-                                        @csrf
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="form-group" style="font-weight:700">
-                                                        <label for="nama_kegiatan">Nama Kegiatan</label>
-                                                        <input type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan">
-                                                        <h6 class="font-italic mt-2">Isikan sesuai nama kegiatan yang dilakukan</h6>
-                                                        <h6 class="font-italic">Contoh : Pengelolaan Dana BOS Sekolah Pendidikan Khusus</h6>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="deskripsi_kegiatan">Deskripsi Kegiatan</label>
-                                                        <input type="text" class="form-control" id="deskripsi_kegiatan" name="deskripsi_kegiatan">
-                                                        <h6 class="font-italic mt-2">Isikan deskripsi sesuai kegiatan yang dilakukan</h6>
-                                                        <h6 class="font-italic">Contoh : Kegiatan ini merupakan kegiatan tahunan yang ...</h6>
-                                                    </div>
-                                                    {{-- <div class="form-group">
-                                                    <label for="gender">Gender</label>
-                                                        <select class="form-control" id="gender" name="gender">
-                                                        <option>L</option>
-                                                        <option>P</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="kota_lahir">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="nama_ortu">Status Aktif</label>
-                                                        <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
-                                                    </div> --}}
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="{{ auth()->user()->nama_user }}">
+                                        </div>
 
-                                                    {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
-                                                    <a href="/kegiatan" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
-                                                </div>
-                                                {{-- <div class="row">
-                                                  <div class="col-lg-6">
-                                                  <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
-                                                  </div>
-                                                </div> --}}
-                              
-                                            </div>
-                                        </form>
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="subbidang">Sub Bidang</label>
+                                            <select class="form-control" id="id_subbidang" name="id_subbidang" readonly placeholder="tes" >
+                                                <option value="{{ $subbidang->id }}" selected>{{ $subbidang->nama_subbidang }}</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">Kegiatan</label>
+                                            <input type="text" class="form-control" id="nama_kegiatan" name="nama_kegiatan" placeholder="">
+                                            <h6 class="font-italic">Isikan kegiatan yang sudah berjalan  </h6>
+                                            <h6 class="font-italic">Contoh : Pembelian alat tulis</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlTextarea1">Deskripsi Kegiatan</label>
+                                            <textarea class="form-control" id="deskripsi_kegiatan" name="deskripsi_kegiatan" rows="3"></textarea>
+                                            <h6 class="font-italic">Isikan rencana kegiatan secara detail</h6>
+                                            <h6 class="font-italic">Contoh : Pembelian alat tulis menghabiskan anggaran sebesar Rp.5.000.000  </h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">Volume</label>
+                                            <input type="number" class="form-control" id="volume" name="volume" placeholder="">
+                                            <h6 class="font-italic">Isikan volume yang sesuai dengan kegiatan</h6>
+                                            <h6 class="font-italic">Contoh : 30</h6>
+                                        </div>
+
+                                        {{-- Satuan --}}
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">Satuan</label>
+                                            <input type="text" class="form-control" id="satuan" name="satuan" placeholder="">
+                                            <h6 class="font-italic">Isikan sesuai nama satuan</h6>
+                                            <h6 class="font-italic">Contoh : Mobil</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="inputState">Jumlah Penerima Manfaat</label>
+                                            <input type="text" class="form-control" id="jumlah_penerima_manfaat" name="jumlah_penerima_manfaat" placeholder="">
+                                            <h6 class="font-italic">Isikan jumlah penerima manfaat</h6>
+                                            <h6 class="font-italic">Contoh : 30</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlSelect1">Jenis DAK</label>
+                                            <select class="form-control" id="id_dak" name="id_dak" placeholder="x">
+                                                <option value=""readonly>-------------------Pilih DAK------------------------</option>
+                                                @foreach($dak as $v)
+                                                    <option value="{{ $v->id }}">{{ $v->nama_dak }}</option>
+                                                @endforeach
+                                            </select>
+                                            <h6 class="font-italic">Isikan jenis DAK sesuai dengan kegiatan </h6>
+                                            <h6 class="font-italic">Contoh : DAK Fisik/Non Fisik  </h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlSelect1">Periode</label>
+                                            <select class="form-control" id="id_batch" name="id_batch" readonly name="batch">
+                                                @foreach($batch as $item)
+                                                    <option value="{{ $item->id }}" selected>Q{{ $item->triwulan_batch }} {{ $item->tahun_batch }}</option>
+                                                @endforeach
+                                            </select>
+                                            <h6 class="font-italic">Isi sesuai dengan periode saat ini</h6>
+                                            <h6 class="font-italic">Contoh : Q1 2022 (Triwulan pertama 2022) </h6>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="formGroupExampleInput" style="font-weight:700">Pagu Diterima</label>
+                                            <input type="text" class="form-control" id="pagu_diterima" name="pagu_diterima" placeholder="Rp.">
+                                            <h6 class="font-italic">Isikan besaran pagu sesuai perencanaan kegiatan</h6>
+                                            <h6 class="font-italic">Contoh :Rp. 6000000 (isikan tanpa titik)</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">Pagu Dibelanjakan</label>
+                                            <input type="text" class="form-control" id="pagu_dibelanjakan" name="pagu_dibelanjakan" placeholder="Rp.">
+                                            <h6 class="font-italic">Isikan besaran pagu sesuai nominal yang dibelanjakan </h6>
+                                            <h6 class="font-italic">Contoh :Rp. 3200000 (isikan tanpa titik)</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="exampleFormControlSelect1">(Opsional) Metode Pembayaran</label>
+                                            <select class="form-control" id="metode_pembayaran" name="metode_pembayaran" >
+                                                    <option value="Cash" selected >Cash</option>
+                                                    <option value="Kredit">Kredit</option>
+                                            </select>
+                                            <h6 class="font-italic">Isikan sesuai metode pembayaran yang digunakan</h6>
+                                        </div>
+
+                                        <div class="form-group" style="font-weight:700">
+                                            <label for="formGroupExampleInput">(Opsional) Kodefikasi/Keterangan/Permasalahan</label>
+                                            <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+                                            <h6 class="font-italic">Isikan sesuai keterangan atau permasalahan terkait</h6>
+                                        </div>
+
+                                        <div class="btn-toolbar text-center well">
+                                                <input type="submit" class="btn btn-primary" value="Submit">
+                                        </div>
+
+
                                 </div>
-                            </div>
 
+
+                            </div>
+                        </form>
                         </div>
                     </div>
-
                 </div>
+
                 <!-- /.container-fluid -->
 
             </div>

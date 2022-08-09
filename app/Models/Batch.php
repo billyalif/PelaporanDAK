@@ -17,9 +17,9 @@ class Batch extends Model
     ];
 
     //relationship
-    public function Anggaran(){
+    public function Kegiatan(){
         //many
-        return $this->hasMany(Anggaran::class, 'id_batch', 'id');
+        return $this->hasMany(Kegiatan::class, 'id_batch', 'id');
     }
 }
 

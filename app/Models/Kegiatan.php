@@ -12,20 +12,35 @@ class Kegiatan extends Model
     protected $table = 'tabel_kegiatan';
     protected $primarykey = 'id';
     protected $fillable = [
-        'nama-kegiatan',
-        'deskripsi_kegiatan'
-
+        'nama_kegiatan',
+        'deskripsi_kegiatan',
+        'volume',
+        'satuan',
+        'jumlah_penerima_manfaat',
+        'pagu_diterima',
+        'pagu_dibelanjakan',
+        'metode_pembayaran',
+        'keterangan',
+        'id_dak',
+        'id_batch',
+        'id_subbidang'
     ];
 
     //relationship
-    public function Anggaran(){
-        return $this->belongsTo(Anggaran::class, 'FK_id_anggaran', 'id');
-    }
 
     public function Subbidang(){
         return $this->belongsTo(Subbidang::class, 'FK_id_sub', 'id');
     }
 
+    public function Batch(){
+        //just having one batch
+        return $this->belongsTo(Batch::class, 'FK_id_batch', 'id');
+    }
+
+    public function Dak(){
+        //just having one dak
+        return $this->belongsTo(Dak::class,'FK_id_dak', 'id');
+    }
 }
 
 ?>

@@ -14,8 +14,8 @@ class Dak extends Model
     protected $fillables = ['nama_dak'];
 
     //relationship
-    public function Anggaran(){
-        return $this->hasMany(Anggaran::class, 'id_dak');
+    public function Kegiatan(){
+        return $this->hasMany(Kegiatan::class, 'id_dak');
     }
 
 }

@@ -79,7 +79,7 @@ Route::post('/ubah-subbid/{id}',[SubBidangController::class, 'update']);
 
 //Kegiatan
 Route::get('/kegiatan-{id}',[KegiatanController::class,"index"]);
-Route::get('/form-kegiatan/{id}',[KegiatanController::class,"insert"]);
+Route::get('/form-kegiatan-{id}',[KegiatanController::class,"insert"]);
 Route::post('/tambah-kegiatan',[KegiatanController::class,"store"]);
 Route::get('/hapus-kegiatan/{id}',[KegiatanController::class, 'destroy']);
 Route::get('/ubah-kegiatan/{id}',[KegiatanController::class, 'edit']);

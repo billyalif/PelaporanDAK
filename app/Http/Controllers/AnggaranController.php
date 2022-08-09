@@ -15,9 +15,10 @@ class AnggaranController extends Controller
 
     }
 
-    public function insert(){
-        $user = TabelUser::all();
-        $kegiatan = Kegiatan::all();
+    public function insert($id){
+         $user = TabelUser::all();
+
+        $kegiatan = Kegiatan::find($id);
         $dak = Dak::all();
         $batch = Batch::all();
 

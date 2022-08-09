@@ -70,7 +70,7 @@
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="nama_satker">Nama Satuan Kerja</label>
                                                         <input type="text" class="form-control" id="nama_satker" name="nama_satker">
-                                                        <h6 class="font-italic mt-2">Isikan sesuai nama Satker yang ada di Kabupaten/Kota/Provinsi</h6>
+                                                        <h6 class="font-italic mt-2">Isikan sesuai nama Satker yang ada di {{ auth()->user()->nama_user }}</h6>
                                                         <h6 class="font-italic">Contoh : Dinas Pendidikan</h6>
                                                     </div>
                                                     <div class="form-group" style="font-weight:700">

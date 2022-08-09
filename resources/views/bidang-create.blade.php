@@ -60,6 +60,7 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
+                                                    <a href="{{ url()->previous() }}" type="button" class="btn btn-warning text-dark">Kembali</a>
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="Satker">Satuan Kerja</label>
                                                         <select class="form-control" id="id_satker" name="id_satker" readonly placeholder="" >

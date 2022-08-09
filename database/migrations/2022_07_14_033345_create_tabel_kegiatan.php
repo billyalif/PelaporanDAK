@@ -17,11 +17,20 @@ class CreateTabelKegiatan extends Migration
             $table->id();
             $table->string('nama_kegiatan', 100);
             $table->mediumText('deskripsi_kegiatan');
+            $table->integer('volume');
+            $table->string('satuan', 100);
+            $table->integer('jumlah_penerima_manfaat');
+            $table->bigInteger('pagu_diterima');
+            $table->bigInteger('pagu_dibelanjakan');
+            $table->string('metode_pembayaran');
+            $table->string('keterangan');
             $table->timestamps();
         });
 
         Schema::table('tabel_kegiatan', function (Blueprint $table) {
             $table->foreignId('id_subbidang')->constrained('tabel_subbidang');
+            $table->foreignId('id_dak')->constrained('tabel_dak');
+            $table->foreignId('id_batch')->constrained('tabel_batch');
         });
     }
 

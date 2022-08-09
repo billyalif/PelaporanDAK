@@ -63,7 +63,6 @@
                                           <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Nama Sub Bidang</th>
-                                            <th scope="col">Deskripsi Sub Bidang</th>
                                             <th scope="col">Lihat Kegiatan</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
@@ -73,7 +72,6 @@
                                           <tr>
                                             <th>{{ $no++ }}</th>
                                             <td>{{ $subbidang->nama_subbidang }}</td>
-                                            <td>{{ $subbidang->deskripsi_subbidang }}</td>
                                             <td><a href="/kegiatan-{{ $subbidang->id }}" class="btn btn-sm btn-primary">Lihat Kegiatan</a></td>
                                             <td>
                                                 <a href="/hapus-subbid/{id}" class="btn btn-sm btn-danger">Hapus</a>
