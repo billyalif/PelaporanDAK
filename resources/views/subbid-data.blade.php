@@ -45,8 +45,8 @@
                         <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Sub Bidang</h1>
                     </div>
 
-                    <a href="/bidang-{{ $bidang }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-subbid-{{ $bidang->id }}" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
+                    <a href="/bidang-{{ $idbidang }}" type="button" class="btn btn-warning text-dark">Kembali</a>
+                    <a href="/form-subbid-{{ $idbidang }}" type="button" class="btn btn-primary1">Tambah Sub Bidang</a>
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
 
@@ -74,8 +74,8 @@
                                             <td>{{ $subbidang->nama_subbidang }}</td>
                                             <td><a href="/kegiatan-{{ $subbidang->id }}" class="btn btn-sm btn-primary">Lihat Kegiatan</a></td>
                                             <td>
-                                                <a href="/hapus-subbid/{id}" class="btn btn-sm btn-danger">Hapus</a>
-                                                <a href="/ubah-subbid/{id}" class="btn btn-sm btn-warning">Ubah</a>
+                                                <a href="/hapus-subbid-{{ $subbidang->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-subbid-{{ $subbidang->id }}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
                                           @endforeach

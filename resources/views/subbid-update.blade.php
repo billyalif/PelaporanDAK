@@ -57,18 +57,25 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      <form method="POST" action="/update-subbid/{{$subbidang->id}}">
+                                      <form method="POST" action="/ubah-subbid-{{ $idsubbid }}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group" style="font-weight:700">
-                                                        <label for="nama_subbidang">Nama Sub Bidang</label>
-                                                        <input type="text" class="form-control" id="nama_subbidang" name="nama_subbidang" value={{ $subbidang['nama_subbidang'] }}>
+                                                        <label for="Bidang">Bidang</label>
+                                                        <select class="form-control" id="id_bidang" name="id_bidang" readonly placeholder="" >
+                                                            <option value="{{ $subbid->bidang->id }}" selected>{{ $subbid->bidang->nama_bidang }}</option>
+                                                        </select>
                                                     </div>
                                                     <div class="form-group" style="font-weight:700">
-                                                        <label for="deskripsi_subbidang">Deskripsi Sub Bidang</label>
-                                                        <input type="text" class="form-control" id="deskripsi_subbidang" name="deskripsi_subbidang" value={{ $subbidang['deskripsi_subbidang'] }}>
+                                                        <label for="nama_subbidang">Nama Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="nama_subbidang" name="nama_subbidang" value="{{ $subbid->nama_subbidang }}">
                                                     </div>
+                                                    {{-- <div class="form-group" style="font-weight:700">
+                                                        <label for="deskripsi_subbidang">Deskripsi Sub Bidang</label>
+                                                        <input type="text" class="form-control" id="deskripsi_subbidang" name="deskripsi_subbidang" value="{{ $subbid->deskripsi_subbidang }}" >
+                                                        
+                                                    </div> --}}
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
                                                         <input type="text" class="form-control" id="hp" name="hp" value={{$data->hp}}>
@@ -90,7 +97,7 @@
                                                     </div> --}}
 
                                                     {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
-                                                    <a href="/subbid" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
+                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

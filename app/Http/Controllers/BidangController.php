@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Bidang;
 use App\Models\Satker;
 use App\Models\TabelUser;
+use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Http\Request;
 
 class BidangController extends Controller
@@ -15,7 +16,8 @@ class BidangController extends Controller
             'tabel_bidang' => $tabel_bidang,
             'title' => 'Data Bidang',
             'no'    => 1,
-            'satker'=>$satker
+            'satker'=> $satker,
+            'idsatker' => $id
         ]);
     }
 
@@ -23,7 +25,8 @@ class BidangController extends Controller
         $satker = Satker::find($id);
         return view('bidang-create',[
             'title' => 'Tambah Bidang',
-            'satker' => $satker
+            'satker' => $satker,
+            'id'     => $id
         ]);
     }
 
@@ -37,34 +40,34 @@ class BidangController extends Controller
 
         Bidang::create($validatedData);
         $request->session()->flash('success','Bidang berhasil ditambahkan!');
-        return redirect()->back();
+        return redirect('/bidang-'.$validatedData['id_satker']);
     }
 
-    public function edit(){
-        $user   = TabelUser::all();
-        $satker = Satker::all();
+    public function edit($id){
+        $bidang = Bidang::find($id);
         return view('bidang-update',[
             'title' => 'Edit Bidang',
-            'user' => $user,
-            'satker' => $satker
+            'idbidang'   => $id,
+            'bidang'    => $bidang
         ]);
     }
 
     public function update(Request $request, $id){
         Bidang::where('id', $id)->update([
             'nama_bidang'   => $request->nama_bidang,
-            'jenis_bidang'  => $request->jenis_bidang,
+            'pj_bidang'  => $request->pj_bidang,
             'updated_at'    => date("Y-m-d H:i:s"),
         ]);
+        $bidang = Bidang::where('id',$id)->pluck('id_satker');
 
         $request->session()->flash('success','Bidang berhasil diupdate!');
-
-        return redirect('/bidang-data');
+        return redirect('/bidang-'.$bidang[0]);
     }
 
     public function destroy($id){
+        $bidang = Bidang::where('id',$id)->pluck('id_satker');
         Bidang::destroy($id);
-        return redirect('/bidang-data')->with('successDelete', 'Bidang berhasil dihapus!');
+        return redirect('/bidang-'.$bidang[0])->with('successDelete', 'Bidang berhasil dihapus!');
     }
 
 }

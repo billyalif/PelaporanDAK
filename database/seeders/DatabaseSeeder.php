@@ -63,7 +63,7 @@ class DatabaseSeeder extends Seeder
                 'nama_user' => 'Kabupaten Bondowoso',
                 'alamat_user' => 'Jl. Letjen Suprapto, Potos, Badean, Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68211',
                 'telp_user' => '(0353)881945',
-                'username_user' => 'adminkab.bojonegoro',
+                'username_user' => 'adminkab.bondowoso',
                 'password' => bcrypt('bondowoso123'),
                 'id_role' =>'2'
             ],
@@ -171,73 +171,73 @@ class DatabaseSeeder extends Seeder
                 'nama_user' => 'Kabupaten Pacitan',
                 'alamat_user' => 'Jl.J.A. Suprapto No 8 Pacitan',
                 'telp_user' => '(0357) 881032',
-                'username_user' => '',
+                'username_user' => 'adminkab.pacitan',
                 'password' => bcrypt('123'),
                 'id_role' =>'2'
             ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
-            [
-                'nama_user' => 'Kabupaten',
-                'alamat_user' => '',
-                'telp_user' => '',
-                'username_user' => '',
-                'password' => bcrypt('123'),
-                'id_role' =>'2'
-            ],
+            // [
+            //     'nama_user' => 'Kabupaten',
+            //     'alamat_user' => '',
+            //     'telp_user' => '',
+            //     'username_user' => '',
+            //     'password' => bcrypt('123'),
+            //     'id_role' =>'2'
+            // ],
 
             [
                 'nama_user' => 'Kabupaten Mojokerto',

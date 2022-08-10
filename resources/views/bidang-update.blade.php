@@ -57,17 +57,17 @@
                                 </div> --}}
                                 <div class="card-body">
 
-                                      <form method="POST" action="/ubah-bidang/{{$bidang->id}}">
+                                      <form method="POST" action="/ubah-bidang-{{ $idbidang }}">
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="nama_bidang">Nama Bidang</label>
-                                                        <input type="text" class="form-control" id="nama_bidang" name="nama_bidang" value={{$data['nama_bidang']}}>
+                                                        <input type="text" class="form-control" id="nama_bidang" name="nama_bidang" value="{{ $bidang->nama_bidang }}">
                                                     </div>
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="pj_bidang">Penanggung Jawab Bidang</label>
-                                                        <input type="text" class="form-control" id="pj_bidang" name="pj_bidang" value={{$data['pj_bidang']}}>
+                                                        <input type="text" class="form-control" id="pj_bidang" name="pj_bidang" value="{{ $bidang->pj_bidang }}">
                                                     </div>
                                                     {{-- <div class="form-group">
                                                         <label for="tgl_lahir">No Hp</label>
@@ -90,7 +90,7 @@
                                                     </div> --}}
 
                                                     {{-- <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button> --}}
-                                                    <a href="/bidang" type="submit" class="btn mt-2 btn-primary btn-sm">Submit</a>
+                                                    <button type="submit" class="btn mt-2 btn-primary btn-sm">Submit</button>
                                                 </div>
                                                 {{-- <div class="row">
                                                   <div class="col-lg-6">

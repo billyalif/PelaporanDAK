@@ -13,7 +13,7 @@ class SubBidangController extends Controller
         $tabel_subbidang = Subbidang::where('id_bidang', $id)->get();
         return view('subbid-data',
             ['tabel_subbidang'=>$tabel_subbidang,
-            'bidang'=> $id,
+            'idbidang'=> $id,
             'title' => 'Data Sub-Bidang',
             'no'    => 1,
             'bidang'=> $bidang
@@ -37,34 +37,34 @@ class SubBidangController extends Controller
 
         Subbidang::create($validatedData);
 
-        return redirect()->back();
         $request->session()->flash('success','SubBidang berhasil ditambahkan!');
+        return redirect('/subbid-'.$validatedData['id_bidang']);
     }
 
-    public function edit(){
-        $tabel_subbidang = Subbidang::all();
-        $tabel_bidang = Bidang::all();
+    public function edit($id){
+        $subbidang = Subbidang::find($id);
         return view('subbid-update',[
             'title' => 'Edit Bidang',
-            'subbidang' => $tabel_subbidang,
-            'bidang' => $tabel_bidang
+            'subbid' => $subbidang,
+            'idsubbid' => $id
         ]);
     }
 
     public function update(Request $request, $id){
         Subbidang::where('id', $id)->update([
-            'nama_subbidang'   => $request->nama_bidang,
+            'nama_subbidang'   => $request->nama_subbidang,
             'updated_at'    => date("Y-m-d H:i:s")
         ]);
 
         $request->session()->flash('success','Sub Bidang berhasil diupdate!');
-
-        return redirect('/subbidang-data');
+        $subbid = Subbidang::where('id',$id)->pluck('id_bidang');
+        return redirect('/subbid-'.$subbid[0]);
     }
 
     public function destroy($id){
-        Bidang::destroy($id);
-        return redirect('/subbidang-data')->with('successDelete', 'Bidang berhasil dihapus!');
+        $subbid = Subbidang::where('id',$id)->pluck('id_bidang');
+        Subbidang::destroy($id);
+        return redirect('/subbid-'.$subbid[0])->with('successDelete', 'Bidang berhasil dihapus!');
     }
 
 }

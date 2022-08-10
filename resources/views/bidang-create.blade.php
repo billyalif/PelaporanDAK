@@ -46,7 +46,7 @@
                     </div>
 
                     <!-- Content Row -->
-                    <div class="row" style="padding-top: 0rem">
+                    <div class="row" style="padding-top: 2rem">
 
                         <div class="col-lg-12 mb-4">
 
@@ -60,7 +60,6 @@
                                         @csrf
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <a href="{{ url()->previous() }}" type="button" class="btn btn-warning text-dark">Kembali</a>
                                                     <div class="form-group" style="font-weight:700">
                                                         <label for="Satker">Satuan Kerja</label>
                                                         <select class="form-control" id="id_satker" name="id_satker" readonly placeholder="" >

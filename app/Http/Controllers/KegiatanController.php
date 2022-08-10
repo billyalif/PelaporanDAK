@@ -7,6 +7,9 @@ use App\Models\Subbidang;
 use App\Models\Dak;
 use App\Models\Batch;
 use Illuminate\Http\Request;
+use App\Exports\KegiatanExport;
+// use Maatwebsite\Excel\Excel;
+use Excel;
 
 class KegiatanController extends Controller
 {
@@ -73,4 +76,8 @@ class KegiatanController extends Controller
 
     }
 
+    public function export($id) 
+    {
+        return Excel::download(new KegiatanExport($id), 'Laporan.xlsx');
+    }
 }

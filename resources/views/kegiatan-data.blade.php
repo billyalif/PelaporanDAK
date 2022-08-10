@@ -45,8 +45,9 @@
                         <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Kegiatan</h1>
                     </div>
 
-                    <a href="/subbid-{{ $subbid }}" type="button" class="btn btn-warning text-dark">Kembali</a>
+                    <a href="/subbid-{{ $subbid->id }}" type="button" class="btn btn-warning text-dark">Kembali</a>
                     <a href="/form-kegiatan-{{ $subbid->id }}" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
+                    <a href="/format-export-excel{{ $subbid->id }}" target="_blank" type="button" class="btn btn-primary1">Export Excel</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
