@@ -42,7 +42,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang, ....</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang, {{ auth()->user()->nama_user }}</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -61,15 +61,20 @@
                                             <div class="h5 mb-2 font-weight-bold text-white">Perhatikan!</div>
                                             <div class="h6 mb-0 font-weight-250 text-white">1. Saat ini pengisian triwulan ke - 3 tahun 2022,
                                                 batas pengisian hingga tanggal 24 September 2022</div>
-                                            <div class="h6 mb-0 font-weight-250 text-white"> 2.  Masukkan laporan triwulan ke - 3 di sini</div>
+                                            <div class="h6 mb-0 font-weight-250 text-white"> 2.  Masukkan laporan triwulan ke - 3 di <a href="/satker" style=font-weight:1000>sini<a></div>
                                         </div>
+
                                         {{-- <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                         </div> --}}
                                     </div>
+
                                 </div>
                             </div>
                         </div>
+
+
+
 
                         <!-- Earnings (Monthly) Card Example -->
                         {{-- <div class="col-xl-3 col-md-6 mb-4">

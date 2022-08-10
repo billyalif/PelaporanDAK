@@ -94,6 +94,12 @@ Route::get('/hapus-anggaran/{id}',[AnggaranController::class, 'destroy']);
 Route::get('/ubah-anggaran/{id}',[AnggaranController::class, 'edit']);
 Route::post('/ubah-anggaran/{id}',[AnggaranController::class, 'update']);
 
+
+//KK
+Route::get('/kk',[UserController::class,"index"]);
+
+Route::get('/satker-{id}',[SatkerController::class,'index2']);
+
 Route::get('/form-laporan', function () {
     return view('formlaporan-depan');
 });
@@ -103,7 +109,7 @@ Route::get('/anggaran-kegiatan', function () {
 });
 
 Route::get('/super-admin', function () {
-    return view('super-admin');
+    return view('dashboard.super-admin');
 });
 
 Route::get('/create-kegiatan', function () {

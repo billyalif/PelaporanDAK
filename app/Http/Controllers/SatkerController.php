@@ -19,6 +19,17 @@ class SatkerController extends Controller
             'title' => 'Data Satker']);
     }
 
+    public function index2($id){
+
+        $user = User::find($id);
+        $tabel_satker2 = Satker::where('id_user', $id)->get();
+        return view('satker-data2',[
+            'tabel_satker'=>$tabel_satker2,
+            'user'=>$user,
+            'title' => 'Data Satker'
+        ]);
+    }
+
 
     public function insert(){
         $kk = TabelUser::all();

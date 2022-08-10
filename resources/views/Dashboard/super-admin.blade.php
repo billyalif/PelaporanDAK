@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>E-SIDAK | {{ $title }}</title>
+    <title>E-SIDAK | </title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang, ...</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Selamat Datang, {{ auth()->user()->nama_user }}</h1>
                     </div>
 
                     <div style="color:black; text-align:center">
@@ -99,14 +99,15 @@
                         </div>
 
                     </div>
+                    <a href="/kk">Lihat Kabupaten/Kota Jawa Timur</a>
 
                     <!-- Content Row -->
 
-                    <div class="row"> 
+                    <div class="row">
 
                         <!-- Area Chart -->
-                         <div class="col-xl-8 col-lg-7"> 
-                            <div class="card shadow mb-4"> 
+                         <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                  {{-- <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -133,10 +134,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
 
                         <!-- Pie Chart -->
-                       <div class="col-xl-4 col-lg-5"> 
+                       <div class="col-xl-4 col-lg-5">
                            {{-- <div class="card shadow mb-2">  --}}
                                 <!-- Card Header - Dropdown -->
                                 {{-- <div
@@ -161,8 +162,8 @@
                                 {{-- <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
                                          <canvas id="myPieChart"></canvas>
-                                    </div> 
-                                    <div class="mt-4 text-center small"> 
+                                    </div>
+                                    <div class="mt-4 text-center small">
                                         <span class="mr-2">
                                             <i class="fas fa-circle text-primary"></i> Direct
                                         </span>
@@ -179,15 +180,15 @@
                     </div>  --}}
 
                     <!-- Content Row -->
-                     <div class="row"> 
+                     <div class="row">
 
                         <!-- Content Column -->
                         <div class="col-lg-10 mb-10">
 
                             <!-- Project Card Example -->
-                            
-                             <div class="card shadow mb-6"> 
-                                <div class="card-header py-6"> 
+
+                             <div class="card shadow mb-6">
+                                <div class="card-header py-6">
                                     <h6 class="m-0 font-weight-bold text-primary">Data Laporan per Tahun 2022</h6>
                                 </div>
                                 <div class="card-body">
@@ -222,7 +223,7 @@
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
 
                             <!-- Color System -->
                              {{-- <div class="row">
@@ -233,7 +234,7 @@
                                             <div class="text-white-50 small">#4e73df</div>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-success text-white shadow">
                                         <div class="card-body">
@@ -294,7 +295,7 @@
 
                         </div>
 
-                        <div class="col-lg-6 mb-4"> 
+                        <div class="col-lg-6 mb-4">
                             <!-- Illustrations -->
                             {{-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">

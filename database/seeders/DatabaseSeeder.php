@@ -57,7 +57,16 @@ class DatabaseSeeder extends Seeder
                 'username_user' => 'adminkab.bojonegoro',
                 'password' => bcrypt('kotabojonegoro'),
                 'id_role' =>'2'
-            ]
+            ],
+
+            [
+                'nama_user' => 'Admin BAPPEDA',
+                'alamat_user' => 'Jl. Pahlawan 102',
+                'telp_user' => '0312371923',
+                'username_user' => 'superadmin.bappeda',
+                'password' => bcrypt('bappedaoke'),
+                'id_role' =>'1'
+            ],
 
 
 
