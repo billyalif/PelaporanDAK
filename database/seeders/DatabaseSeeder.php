@@ -150,6 +150,96 @@ class DatabaseSeeder extends Seeder
             ],
 
             [
+                'nama_user' => 'Kabupaten Nganjuk',
+                'alamat_user' => 'JL. Basuki Rachmat, No. 1, Kabupaten Nganjuk, Jawa Timur',
+                'telp_user' => '(0358) 232001',
+                'username_user' => 'adminkab.nganjuk',
+                'password' => bcrypt('nganjuk123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten Ngawi',
+                'alamat_user' => 'Jl. Tengku Umar No. 12, Kabupaten Ngawi, Jawa Timur.',
+                'telp_user' => '(0351) 749001',
+                'username_user' => 'adminkab.ngawi',
+                'password' => bcrypt('ngawi123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten Pacitan',
+                'alamat_user' => 'Jl.J.A. Suprapto No 8 Pacitan',
+                'telp_user' => '(0357) 881032',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
+                'nama_user' => 'Kabupaten',
+                'alamat_user' => '',
+                'telp_user' => '',
+                'username_user' => '',
+                'password' => bcrypt('123'),
+                'id_role' =>'2'
+            ],
+
+            [
                 'nama_user' => 'Kabupaten Mojokerto',
                 'alamat_user' => 'Jl. Ahmad Yani No. 16, Mergelo, Purwotengah, Kec. Magersari, Kota Mojokerto, Jawa Timur',
                 'telp_user' => '(0321)321744',
@@ -158,6 +248,7 @@ class DatabaseSeeder extends Seeder
                 'id_role' =>'2'
             ],
 
+            // ADMIN BAPPEDA
             [
                 'nama_user' => 'Admin BAPPEDA',
                 'alamat_user' => 'Jl. Pahlawan 102',
