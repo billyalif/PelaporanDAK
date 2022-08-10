@@ -16,18 +16,18 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-      
+
         $credentials = [
             'username_user' => $request->username,
             'password' => $request->password,
         ];
-        
+
         // dd($credentials);
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
 
-            return redirect()->intended('/satker');
+            return redirect()->intended('/home');
         };
 
 

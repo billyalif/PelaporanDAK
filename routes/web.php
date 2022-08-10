@@ -110,5 +110,9 @@ Route::get('/create-kegiatan', function () {
     return view('create-kegiatan');
 });
 
+Route::get('/home', function () {
+    return view('landing');
+});
+
 //EXPORT EXCEL
 Route::get('/satker-export_excel', [SatkerController::class, 'export_excel']);
