@@ -81,6 +81,7 @@
                                             <td>{{ $kegiatan->pagu_diterima }}</td>
                                             <td>{{ $kegiatan->pagu_dibelanjakan }}</td>
                                             <td>
+                                                <a href="/-{{ $kegiatan->id }}" class="btn btn-sm btn-primary">Realisasi</a>
                                                 <a href="/detail-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-secondary">Lihat Detail</a>
                                                 <a href="/hapus-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-danger">Hapus</a>
                                             </td>
