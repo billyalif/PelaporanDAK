@@ -8,7 +8,7 @@ use App\Models\Dak;
 use App\Models\Batch;
 use Illuminate\Http\Request;
 use App\Exports\KegiatanExport;
-// use Maatwebsite\Excel\Excel;
+ //use Maatwebsite\Excel\Excel;
 use Excel;
 
 class KegiatanController extends Controller
@@ -21,6 +21,14 @@ class KegiatanController extends Controller
             'subbid'=> $subbidang,
             'title' => 'Data Kegiatan',
             'no'    => 1,
+        ]);
+    }
+
+    public function detail(Kegiatan $id){
+        $kegiatan = Kegiatan::find($id);
+        return view('kegiatan-detail',
+            ['tabel_kegiatan'=>$kegiatan,
+            'title' => 'Data Kegiatan',
         ]);
     }
 
@@ -57,7 +65,7 @@ class KegiatanController extends Controller
         Kegiatan::create($validatedData);
 
         $request->session()->flash('success', 'Kegiatan berhasil ditambahkan');
-        return redirect()->back();
+        return redirect('/kegiatan-'.$validatedData['id_subbidang']);
     }
 
     public function edit(){
@@ -72,11 +80,13 @@ class KegiatanController extends Controller
 
     }
 
-    public function destroy(){
+    public function destroy($id){
+        Kegiatan::destroy($id);
 
+        return redirect()->back();
     }
 
-    public function export($id) 
+    public function export($id)
     {
         return Excel::download(new KegiatanExport($id), 'Laporan.xlsx');
     }

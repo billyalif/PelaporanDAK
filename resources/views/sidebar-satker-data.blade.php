@@ -42,12 +42,11 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Kegiatan</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Satuan Kerja</h1>
                     </div>
 
-                    <a href="/subbid-{{ $subbid->id }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-kegiatan-{{ $subbid->id }}" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
-                    <a href="/format-export-excel{{ $subbid->id }}" target="_blank" type="button" class="btn btn-primary1">Export Excel</a>
+                    {{-- <button type="button" class="btn btn-primary1">Tambah Satuan Kerja</button> --}}
+                    {{-- <a href="/bidang" type="button" class="btn btn-primary1">Masuk ke Bidang</a> --}}
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -64,25 +63,29 @@
                                         <thead class="thead-dark">
                                           <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Nama Kegiatan</th>
-                                            <th scope="col">Deskripsi Kegiatan</th>
-                                            <th scope="col">Pagu Diterima</th>
-                                            <th scope="col">Pagu Dibelanjakan</th>
+                                            <th scope="col">Nama Satuan Kerja</th>
+                                            <th scope="col">Alamat</th>
+                                            <th scope="col">No. Telp</th>
+                                            <th scope="col">Penanggung Jawab</th>
+                                            <th scope="col">Bidang</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @php $no = 1; @endphp
-                                            @foreach ($tabel_kegiatan as $kegiatan)
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($tabel_satker as $satker)
                                           <tr>
                                             <th>{{ $no++ }}</th>
-                                            <td>{{ $kegiatan->nama_kegiatan }}</td>
-                                            <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
-                                            <td>{{ $kegiatan->pagu_diterima }}</td>
-                                            <td>{{ $kegiatan->pagu_dibelanjakan }}</td>
+                                            <td>{{ $satker->nama_satker }}</td>
+                                            <td>{{ $satker->alamat_satker }}</td>
+                                            <td>{{ $satker->notelp_satker }}</td>
+                                            <td>{{ $satker->pj_satker }}</td>
+                                            <td><a href="/bidang-{{ $satker->id }}" class="btn btn-sm btn-primary">Lihat Bidang</a></td>
                                             <td>
-                                                <a href="/detail-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-secondary">Lihat Detail</a>
-                                                <a href="/hapus-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/hapus-satker/{id}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-satker/{id}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
                                           @endforeach

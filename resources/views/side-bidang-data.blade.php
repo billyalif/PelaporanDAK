@@ -42,12 +42,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Kegiatan</h1>
+                        <h1 class="h3 mb-2 text-gray-800 font-weight-bold">Data Bidang</h1>
                     </div>
 
-                    <a href="/subbid-{{ $subbid->id }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-kegiatan-{{ $subbid->id }}" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
-                    <a href="/format-export-excel{{ $subbid->id }}" target="_blank" type="button" class="btn btn-primary1">Export Excel</a>
+                    {{-- <button type="button" class="btn btn-primary1" href="/form-bidang">Tambah Bidang</button> --}}
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -64,25 +62,22 @@
                                         <thead class="thead-dark">
                                           <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Nama Kegiatan</th>
-                                            <th scope="col">Deskripsi Kegiatan</th>
-                                            <th scope="col">Pagu Diterima</th>
-                                            <th scope="col">Pagu Dibelanjakan</th>
+                                            <th scope="col">Nama Bidang</th>
+                                            <th scope="col">Penanggung Jawab</th>
+                                            <th scope="col">Subbidang</th>
                                             <th scope="col">Aksi</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @php $no = 1; @endphp
-                                            @foreach ($tabel_kegiatan as $kegiatan)
+                                            @foreach ($tabel_bidang as $bidang)
                                           <tr>
                                             <th>{{ $no++ }}</th>
-                                            <td>{{ $kegiatan->nama_kegiatan }}</td>
-                                            <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
-                                            <td>{{ $kegiatan->pagu_diterima }}</td>
-                                            <td>{{ $kegiatan->pagu_dibelanjakan }}</td>
+                                            <td>{{ $bidang->nama_bidang }}</td>
+                                            <td>{{ $bidang->pj_bidang }}</td>
+                                            <td><a href="/subbid-{{ $bidang->id }}" class="btn btn-sm btn-primary">Lihat Subbidang</a></td>
                                             <td>
-                                                <a href="/detail-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-secondary">Lihat Detail</a>
-                                                <a href="/hapus-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/hapus-bidang-{{ $bidang->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                                                <a href="/ubah-bidang-{{ $bidang->id }}" class="btn btn-sm btn-warning">Ubah</a>
                                             </td>
                                           </tr>
                                           @endforeach

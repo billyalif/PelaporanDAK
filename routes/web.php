@@ -60,6 +60,7 @@ Route::post('/tambah-bidang',[BidangController::class,'store']);
 Route::get('/hapus-bidang-{id}',[BidangController::class, 'destroy']);
 Route::get('/ubah-bidang-{id}',[BidangController::class, 'edit']);
 Route::post('/ubah-bidang-{id}',[BidangController::class, 'update']);
+Route::get('/side-bidang-{id}',[BidangController::class,'side']);
 
 //Satker
 Route::get('/satker',[SatkerController::class,'index']);
@@ -68,6 +69,8 @@ Route::post('/tambah-satker',[SatkerController::class,'store']);
 Route::get('/hapus-satker-{id}',[SatkerController::class, 'destroy']);
 Route::get('/ubah-satker-{id}',[SatkerController::class, 'edit']);
 Route::post('/ubah-satker-{id}',[SatkerController::class, 'update']);
+
+
 
 //Subbid
 Route::get('/subbid-{id}',[SubBidangController::class,"index"]);
@@ -84,7 +87,7 @@ Route::post('/tambah-kegiatan',[KegiatanController::class,"store"]);
 Route::get('/hapus-kegiatan-{id}',[KegiatanController::class, 'destroy']);
 Route::get('/ubah-kegiatan-{id}',[KegiatanController::class, 'edit']);
 Route::post('/ubah-kegiatan-{id}',[KegiatanController::class, 'update']);
-
+Route::get('/detail-kegiatan-{id}',[KegiatanController::class, 'detail']);
 
 //Anggaran
 Route::get('/anggaran',[AnggaranController::class,"index"]);

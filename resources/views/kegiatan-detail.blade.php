@@ -45,9 +45,6 @@
                         <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Data Kegiatan</h1>
                     </div>
 
-                    <a href="/subbid-{{ $subbid->id }}" type="button" class="btn btn-warning text-dark">Kembali</a>
-                    <a href="/form-kegiatan-{{ $subbid->id }}" type="button" class="btn btn-primary1">Tambah Kegiatan</a>
-                    <a href="/format-export-excel{{ $subbid->id }}" target="_blank" type="button" class="btn btn-primary1">Export Excel</a>
 
                     <!-- Content Row -->
                     <div class="row" style="padding-top: 2rem">
@@ -63,27 +60,36 @@
                                     <table class="table">
                                         <thead class="thead-dark">
                                           <tr>
-                                            <th scope="col">No</th>
+                                            <th scope="col">Sub Bidang</th>
                                             <th scope="col">Nama Kegiatan</th>
                                             <th scope="col">Deskripsi Kegiatan</th>
-                                            <th scope="col">Pagu Diterima</th>
-                                            <th scope="col">Pagu Dibelanjakan</th>
-                                            <th scope="col">Aksi</th>
+                                            <th scope="col">Volume</th>
+                                            <th scope="col">Satuan</th>
+                                            <th scope="col">Jumlah Penerima Manfaat</th>
+                                            <th scope="col">DAK</th>
+                                            <th scope="col">Triwulan</th>
+                                            <th scope="col">Pagu</th>
+                                            <th scope="col">Realisasi</th>
+                                            <th scope="col">Sisa</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                            @php $no = 1; @endphp
                                             @foreach ($tabel_kegiatan as $kegiatan)
                                           <tr>
-                                            <th>{{ $no++ }}</th>
+                                            @php
+                                                $a = $kegiatan->pagu_diterima - $kegiatan->pagu_dibelanjakan;
+                                            @endphp
+                                            <td>{{ $kegiatan->Subbidang->nama_subbidang }}</td>
                                             <td>{{ $kegiatan->nama_kegiatan }}</td>
                                             <td>{{ $kegiatan->deskripsi_kegiatan }}</td>
-                                            <td>{{ $kegiatan->pagu_diterima }}</td>
-                                            <td>{{ $kegiatan->pagu_dibelanjakan }}</td>
-                                            <td>
-                                                <a href="/detail-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-secondary">Lihat Detail</a>
-                                                <a href="/hapus-kegiatan-{{ $kegiatan->id }}" class="btn btn-sm btn-danger">Hapus</a>
-                                            </td>
+                                            <td>{{ $kegiatan->volume}}</td>
+                                            <td>{{ $kegiatan->satuan }}</td>
+                                            <td>{{ $kegiatan->jumlah_penerima_manfaat }}</td>
+                                            <td>{{ $kegiatan->Dak->nama_dak}}</td>
+                                            <td>Q{{ $kegiatan->Batch->triwulan_batch}} {{ $kegiatan->Batch->tahun_batch }}</td>
+                                            <td>Rp {{ $kegiatan->pagu_diterima }}</td>
+                                            <td>Rp {{ $kegiatan->pagu_dibelanjakan }}</td>
+                                            <td>Rp{{ $a }}</td>
                                           </tr>
                                           @endforeach
                                         </tbody>
