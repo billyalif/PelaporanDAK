@@ -30,6 +30,7 @@ class SatkerController extends Controller
         ]);
     }
 
+    
 
     public function insert(){
         $kk = TabelUser::all();

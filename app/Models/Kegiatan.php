@@ -29,17 +29,17 @@ class Kegiatan extends Model
     //relationship
 
     public function Subbidang(){
-        return $this->belongsTo(Subbidang::class, 'FK_id_sub', 'id');
+        return $this->belongsTo(Subbidang::class, 'id_subbidang', 'id');
     }
 
     public function Batch(){
         //just having one batch
-        return $this->belongsTo(Batch::class, 'FK_id_batch', 'id');
+        return $this->belongsTo(Batch::class, 'id_batch', 'id');
     }
 
     public function Dak(){
         //just having one dak
-        return $this->belongsTo(Dak::class,'FK_id_dak', 'id');
+        return $this->belongsTo(Dak::class,'id_dak', 'id');
     }
 }
 

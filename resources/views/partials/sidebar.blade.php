@@ -38,10 +38,18 @@ rel="stylesheet">
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/satker">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data Laporan DAK</span>
+                    <span>Data Satker</span>
                 </a>
+
+                    <a class="nav-link" href="/side-bidang-{{ auth()->user()->id }}">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Data Bidang</span>
+                    </a>
+
+
+
                 {{-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
@@ -53,10 +61,10 @@ rel="stylesheet">
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                {{-- <a class="nav-link collapsed" href="#">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Form Laporan DAK</span>
-                </a>
+                </a> --}}
                 {{-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">

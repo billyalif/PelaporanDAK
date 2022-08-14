@@ -54,7 +54,7 @@
                                 <div class="card-body">
                                     <form>
                                         <div class="form-group" style="font-weight:700">
-                                            <label for="formGroupExampleInput">Provinsi/Kab/Kota</label>
+                                            <label for="formGroupExampleInput">Kabupaten/Kota</label>
                                             <input type="text" class="form-control" id="formGroupExampleInput" readonly placeholder="Kab. Kediri">
 
                                         </div>

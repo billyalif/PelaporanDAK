@@ -40,7 +40,6 @@
             </div> --}}
 
             <a class="btn1 btn-masuk" href="{{ url('login') }}">   MASUK   </a>
-            <a class="btn1 btn-masuk" href="{{ url('satker') }}">   Home   </a>
         </div>
 
     </body>

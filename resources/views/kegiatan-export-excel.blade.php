@@ -12,7 +12,7 @@
             <th colspan="9">LAPORAN KEMAJUAN PELAKSANAAN KEGIATAN</th>
         </tr>
         <tr>
-            <th colspan="9">DANA ALOKASI KHUSUS (DAK) NON FISIK BANTUAN OPERASIONAL SEKOLAH (BOS)</th>
+            <th colspan="9">DANA ALOKASI KHUSUS (DAK)</th>
         </tr>
         <tr>
             <th colspan="9">TAHUN ANGGARAN 2022</th>
@@ -21,15 +21,15 @@
         </tr>
         <tr>
             <td>Provinsi</td>
-            <td>:Jawa Timur</td>
+            <td>: Jawa Timur</td>
         </tr>
         <tr>
             <td>Satker</td>
-            <td>:{{ $satker[0] }}</td>
+            <td>: {{ $satker[0] }}</td>
         </tr>
         <tr>
             <td>Triwulan</td>
-            <td>:2</td>
+            <td>: 2</td>
         </tr>
         <tr>
         </tr>
@@ -38,14 +38,15 @@
                 <tr>
                     <th style="border:1px solid black;border-collapse:collapse;" rowspan="2">No</th>
                     <th style="border:1px solid black;border-collapse:collapse;" rowspan="2">Sub Bidang/Kegiatan</th>
+                    <th style="border:1px solid black;border-collapse:collapse;" rowspan="2">Deskripsi Kegiatan</th>
                     <th style="border:1px solid black;border-collapse:collapse;" colspan="3">Perencanaan Kegiatan</th>
                     <th style="border:1px solid black;border-collapse:collapse;" colspan="3">Keuangan</th>
-                    <th style="border:1px solid black;border-collapse:collapse;" rowspan="2">Deskripsi Kegiatan</th>
+                    <th style="border:1px solid black;border-collapse:collapse;" rowspan="2">Keterangan/Kodefikasi Permasalahan</th>
                 </tr>
                 <tr>
                     <th style="border:1px solid black;border-collapse:collapse;">Vol</th>
                     <th style="border:1px solid black;border-collapse:collapse;">Satuan</th>
-                    <th style="border:1px solid black;border-collapse:collapse;">Jumlah Penerima</th>
+                    <th style="border:1px solid black;border-collapse:collapse;">Jumlah Penerima Manfaat</th>
                     <th style="border:1px solid black;border-collapse:collapse;">Pagu Diterima</th>
                     <th style="border:1px solid black;border-collapse:collapse;">Pagu Dibelanjakan</th>
                     <th style="border:1px solid black;border-collapse:collapse;">Metode Pembayaran</th>
@@ -56,6 +57,7 @@
                 <tr>
                     <td style="border:1px solid black;border-collapse:collapse;">{{ $no++ }}</td>
                     <td style="border:1px solid black;border-collapse:collapse;">{{ $data->nama_kegiatan }}</td>
+                    <td style="border:1px solid black;border-collapse:collapse;">{{ $data->deskripsi_kegiatan }}</td>
                     <td style="border:1px solid black;border-collapse:collapse;">{{ $data->volume }}</td>
                     <td style="border:1px solid black;border-collapse:collapse;">{{ $data->satuan }}</td>
                     <td style="border:1px solid black;border-collapse:collapse;">{{ $data->jumlah_penerima_manfaat }}</td>
@@ -68,8 +70,8 @@
             </tbody>
         </table>
     </table>
-        
-{{-- 
+
+{{--
     <table>
         <thead>
 

@@ -21,6 +21,20 @@ class BidangController extends Controller
         ]);
     }
 
+    public function side(){
+        $id =  auth()->user()->id;
+        $satker = Satker::find($id);
+        $tabel_bidang = Bidang::where('id_satker',$id)->get();
+        return view('side-bidang-data',[
+            'tabel_bidang' => $tabel_bidang,
+            'title' => 'Data Bidang',
+            'no'    => 1,
+            'satker'=> $satker,
+            'idsatker' => $id
+        ]);
+    }
+
+
     public function insert($id){
         $satker = Satker::find($id);
         return view('bidang-create',[
